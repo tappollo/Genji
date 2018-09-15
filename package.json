@@ -11,7 +11,7 @@
     "react-native": "0.57.0",
     "react-native-blur": "^3.2.2",
     "react-native-fast-image": "^5.0.3",
-    "react-native-firebase": "^4.3.8",
+    "react-native-firebase": "^5.0.0-rc1",
     "react-native-image-gallery": "^2.1.5",
     "react-native-image-picker": "^0.26.10",
     "react-native-linear-gradient": "^2.4.2",
