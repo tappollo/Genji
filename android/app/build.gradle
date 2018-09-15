@@ -137,6 +137,15 @@ android {
 }
 
 dependencies {
+    compile project(':react-native-version-number')
+    compile project(':react-native-vector-icons')
+    compile project(':react-native-share')
+    compile project(':react-native-shake-event')
+    compile project(':react-native-linear-gradient')
+    compile project(':react-native-image-picker')
+    compile project(':react-native-firebase')
+    compile project(':react-native-fast-image')
+    compile project(':react-native-blur')
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation "com.android.support:appcompat-v7:${rootProject.ext.supportLibVersion}"
     implementation "com.facebook.react:react-native:+"  // From node_modules
