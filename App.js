@@ -7,7 +7,7 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View} from 'react-native';
+import {Platform, StyleSheet, Text, View, Linking} from 'react-native';
 import {auth} from "react-native-firebase";
 
 const instructions = Platform.select({
@@ -21,7 +21,8 @@ type Props = {};
 export default class App extends Component<Props> {
   async componentDidMount() {
     try {
-      await auth().signInAnonymouslyAndRetrieveData()
+      // await auth().signInAnonymouslyAndRetrieveData()
+      Linking.openURL("https://github.com/login/oauth/authorize?client_id=daa3ed310bf7c0d7ba1e&redirect_uri=https://genjiapp.firebaseapp.com/__/auth/handler")
     } catch (e) {
       alert(e)
     }
