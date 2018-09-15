@@ -1,12 +1,13 @@
 import RepoCard from "../components/RepoCard";
 import React from "react";
+import { FlatList } from "react-native";
 
 const TodayPage = () => (
-  <RepoCard/>
+  <FlatList renderItem={({ item }) => <RepoCard />} data={[]} />
 );
 
 TodayPage.navigationOptions = {
-  title: 'Today'
+  title: "Today"
 };
 
 export default TodayPage;

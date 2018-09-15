@@ -1057,6 +1057,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = 7CRYNR44B3;
 						ProvisioningStyle = Manual;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -1848,7 +1849,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7CRYNR44B3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-blur/ios",
@@ -1873,7 +1874,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matrix.genji;
 				PRODUCT_NAME = Genji;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "661042bb-8043-4875-8f02-4b2d97aef1cc";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.matrix.genji";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Debug;
@@ -1886,7 +1888,7 @@
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = 7CRYNR44B3;
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(SRCROOT)/../node_modules/react-native-blur/ios",
@@ -1911,7 +1913,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matrix.genji;
 				PRODUCT_NAME = Genji;
-				PROVISIONING_PROFILE_SPECIFIER = "";
+				PROVISIONING_PROFILE = "661042bb-8043-4875-8f02-4b2d97aef1cc";
+				PROVISIONING_PROFILE_SPECIFIER = "match Development com.matrix.genji";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
