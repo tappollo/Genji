@@ -25,9 +25,21 @@
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Firebase</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
 				<string>com.googleusercontent.apps.268067294807-0lrsfphtsodv29mssq3e3ru3568kiggf</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Genji</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>genji</string>
 			</array>
 		</dict>
 	</array>
