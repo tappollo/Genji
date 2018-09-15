@@ -133,18 +133,11 @@ const RepoDetailPage = ({ navigation }) => (
             }}
           </Onmount>
           {!state.ready && <Loading />}
-          {state.content && (
-            <Readme
-              onReady={() => {
-                !state.ready && setState({ ready: true });
-              }}
-              baseUrl={
-                navigation.getParam("repo").repo_link + "/raw/master/README.md"
-              }
-            >
-              {state.content}
-            </Readme>
-          )}
+          <Readme
+            style={{opacity: state.ready ? 1 : 0}}
+            onReady={() => { !state.ready && setState({ ready: true }); }}
+            repo={ navigation.getParam("repo").repo }
+          />
           <BottomSpacer />
         </ScrollView>
         <Banner

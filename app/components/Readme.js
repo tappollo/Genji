@@ -43,28 +43,42 @@ ${html}
 </html>
 `;
 
-const Readme = ({ children, onReady, ...props }) => (
-  <Fragment>
-    <AutoHeightWebView
-      enableAnimation={false}
-      onLoadEnd={() => {
-        onReady()
-      }}
-      onMessage={async event => {
-        const url = event?.nativeEvent?.data;
-        if (!url) {
-          return;
+const Readme = ({ repo, onReady, style }) => (
+  <AutoHeightWebView
+    style={style}
+    enableAnimation={false}
+    onLoadEnd={() => {
+      onReady();
+    }}
+    onMessage={async event => {
+      const url = event?.nativeEvent?.data;
+      if (!url) {
+        return;
+      }
+      if (await SafariView.isAvailable()) {
+        SafariView.show({ url });
+      } else {
+        Linking.openURL(url);
+      }
+    }}
+    source={{ url: `https://github.com/${repo}/blob/master/README.md` }}
+    customScript={`
+	window.onclick = function(e) {
+		if (e.target.tagName === "A") {
+		  window.postMessage(e.target.href);
+		}
+		return false;
+	};
+    `}
+    customStyle={`
+        header.Header, .reponav-wrapper.lh-default, .breadcrumb.blob-breadcrumb, footer {
+          display: none !important;
         }
-        if (await SafariView.isAvailable()) {
-          SafariView.show({ url });
-        } else {
-          Linking.openURL(url);
+        body {
+          background-color: transparent !important
         }
-      }}
-      source={{ html: template(children) }}
-      {...props}
-    />
-  </Fragment>
+      `}
+  />
 );
 
 export default Readme;
