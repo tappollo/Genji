@@ -4278,6 +4278,10 @@ react-native-rate@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/react-native-rate/-/react-native-rate-1.1.2.tgz#11c8a70de261da706311698270467fde5cf8a26b"
 
+react-native-safari-view@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-safari-view/-/react-native-safari-view-2.1.0.tgz#1e0cd12c62bce79bc1759c7e281646b08b61c959"
+
 react-native-safe-area-view@^0.10.0:
   version "0.10.0"
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.10.0.tgz#e8e9228d22698c0f82ad1202d24a4e4977260489"
