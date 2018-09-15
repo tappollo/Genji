@@ -1,4 +1,6 @@
 rootProject.name = 'Genji'
+include ':react-native-fs'
+project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
 include ':react-native-autoheight-webview'
 project(':react-native-autoheight-webview').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-autoheight-webview/android')
 include ':react-native-version-number'
