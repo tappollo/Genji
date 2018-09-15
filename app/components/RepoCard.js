@@ -57,7 +57,7 @@ const Desc = styled.Text`
 const InfoRow = styled.View`
   flex-direction: row;
   align-items: center;
-  margin-top: 10px;
+  margin-top: 15px;
 `;
 
 const InfoText = styled.Text`
@@ -96,11 +96,21 @@ Star.Text = styled.Text`
   font-weight: 700;
 `;
 
-const RepoCard = ({ repo, desc, color, lang, stars, forks, avatars }) => (
+const RepoCard = ({
+  repo,
+  desc,
+  color,
+  lang,
+  stars,
+  forks,
+  avatars,
+  activity,
+  onPress
+}) => (
   <Stateful state={{ zoom: new Animated.Value(0) }}>
     {({ state, setState }) => (
       <TouchableWithoutFeedback
-        onPress={() => alert("Test")}
+        onPress={onPress}
         onPressIn={() => {
           Animated.spring(state.zoom, {
             toValue: 1
@@ -136,6 +146,8 @@ const RepoCard = ({ repo, desc, color, lang, stars, forks, avatars }) => (
             <InfoText>{stars}</InfoText>
             <InfoIcon name="ios-git-merge" />
             <InfoText>{forks}</InfoText>
+            <View style={{ flex: 1 }} />
+            <InfoText style={{marginRight: 0}}>{activity}</InfoText>
           </InfoRow>
           <InfoRow>
             <InfoText style={{ marginRight: 5 }}>Built by</InfoText>
