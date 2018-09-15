@@ -1,0 +1,430 @@
+[
+  {
+    "author": "SteveLTN",
+    "repo": "SteveLTN/https-portal",
+    "repo_link": "https://github.com/SteveLTN/https-portal",
+    "desc": "A fully automated HTTPS server powered by Nginx, Let's Encrypt and Docker.",
+    "lang": "Ruby",
+    "color": "#701516",
+    "stars": "1,720",
+    "forks": "106",
+    "activity": "964 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/508007?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/13707?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/2608862?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/6626093?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/182451?s=40&v=4"
+    ]
+  },
+  {
+    "author": "you-dont-need",
+    "repo": "you-dont-need/You-Dont-Need-Momentjs",
+    "repo_link": "https://github.com/you-dont-need/You-Dont-Need-Momentjs",
+    "desc": "List of date-fns or native functions which you can use to replace moment.js + ESLint Plugin",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "2,693",
+    "forks": "43",
+    "activity": "758 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/15620651?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/6316590?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/4587603?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/359395?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/25688258?s=40&v=4"
+    ]
+  },
+  {
+    "author": "zziz",
+    "repo": "zziz/pwc",
+    "repo_link": "https://github.com/zziz/pwc",
+    "desc": "Papers with code. Sorted by stars. Updated weekly.",
+    "lang": "Unknown",
+    "stars": "1,691",
+    "forks": "105",
+    "activity": "623 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/2147644?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/1143625?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/27669915?s=40&v=4"
+    ]
+  },
+  {
+    "author": "cjbarber",
+    "repo": "cjbarber/ToolsOfTheTrade",
+    "repo_link": "https://github.com/cjbarber/ToolsOfTheTrade",
+    "desc": "Tools of The Trade, from Hacker News.",
+    "lang": "Unknown",
+    "stars": "12,206",
+    "forks": "977",
+    "activity": "301 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/3237905?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/5341072?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/44345?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/181597?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/271622?s=40&v=4"
+    ]
+  },
+  {
+    "author": "facebookincubator",
+    "repo": "facebookincubator/LogDevice",
+    "repo_link": "https://github.com/facebookincubator/LogDevice",
+    "desc": "Distributed storage for sequential data",
+    "lang": "C++",
+    "color": "#f34b7d",
+    "stars": "833",
+    "forks": "56",
+    "activity": "289 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/8821591?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/1073020?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/37041441?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/1491597?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/59670?s=40&v=4"
+    ]
+  },
+  {
+    "author": "npm",
+    "repo": "npm/tink",
+    "repo_link": "https://github.com/npm/tink",
+    "desc": "a dependency unwinder for javascript",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "647",
+    "forks": "9",
+    "activity": "267 stars today",
+    "avatars": [
+      "https://avatars2.githubusercontent.com/u/17535?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/983798?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/26602940?s=40&v=4"
+    ]
+  },
+  {
+    "author": "ripienaar",
+    "repo": "ripienaar/free-for-dev",
+    "repo_link": "https://github.com/ripienaar/free-for-dev",
+    "desc": "A list of SaaS, PaaS and IaaS offerings that have free tiers of interest to devops and infradev",
+    "lang": "Unknown",
+    "stars": "20,303",
+    "forks": "2,190",
+    "activity": "262 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/82342?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/33765260?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/5954335?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/13208038?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/511290?s=40&v=4"
+    ]
+  },
+  {
+    "author": "schollz",
+    "repo": "schollz/rwtxt",
+    "repo_link": "https://github.com/schollz/rwtxt",
+    "desc": "A cms for absolute minimalists.",
+    "lang": "Go",
+    "color": "#375eab",
+    "stars": "252",
+    "forks": "9",
+    "activity": "235 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/6550035?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/282788?s=40&v=4"
+    ]
+  },
+  {
+    "author": "axa-group",
+    "repo": "axa-group/nlp.js",
+    "repo_link": "https://github.com/axa-group/nlp.js",
+    "desc": "An NLP library built in node over Natural, with entity extraction, sentiment analysis, automatic language identify, and so more",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "795",
+    "forks": "45",
+    "activity": "237 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/15154218?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/6904368?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/5803170?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/10708215?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/860507?s=40&v=4"
+    ]
+  },
+  {
+    "author": "byoungd",
+    "repo": "byoungd/English-level-up-tips-for-Chinese",
+    "repo_link": "https://github.com/byoungd/English-level-up-tips-for-Chinese",
+    "desc": "可能是让你受益匪浅的英语进阶指南",
+    "lang": "Unknown",
+    "stars": "12,965",
+    "forks": "1,445",
+    "activity": "175 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/16145783?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/17680637?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/5085821?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/4256108?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/8402647?s=40&v=4"
+    ]
+  },
+  {
+    "author": "Nozbe",
+    "repo": "Nozbe/WatermelonDB",
+    "repo_link": "https://github.com/Nozbe/WatermelonDB",
+    "desc": "🍉 Next-gen database for powerful React and React Native apps that scales to 10,000s of records and remains fast ⚡️",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "3,075",
+    "forks": "78",
+    "activity": "155 stars today",
+    "avatars": [
+      "https://avatars3.githubusercontent.com/u/183747?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/1467712?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/23499434?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/14039772?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/28709559?s=40&v=4"
+    ]
+  },
+  {
+    "author": "mariusandra",
+    "repo": "mariusandra/pigeon-maps",
+    "repo_link": "https://github.com/mariusandra/pigeon-maps",
+    "desc": "ReactJS Maps without external dependencies",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "2,299",
+    "forks": "71",
+    "activity": "155 stars today",
+    "avatars": [
+      "https://avatars2.githubusercontent.com/u/53387?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/12750442?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/272058?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/15047534?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/1224709?s=40&v=4"
+    ]
+  },
+  {
+    "author": "mweststrate",
+    "repo": "mweststrate/immer",
+    "repo_link": "https://github.com/mweststrate/immer",
+    "desc": "Create the next immutable state by mutating the current one",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "6,578",
+    "forks": "180",
+    "activity": "151 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/1820292?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/16726491?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/14368835?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/174864?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/1855878?s=40&v=4"
+    ]
+  },
+  {
+    "author": "thedaviddias",
+    "repo": "thedaviddias/Front-End-Checklist",
+    "repo_link": "https://github.com/thedaviddias/Front-End-Checklist",
+    "desc": "🗂 The perfect Front-End Checklist for modern websites and meticulous developers",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "31,128",
+    "forks": "2,900",
+    "activity": "143 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/237229?s=40&v=4",
+      "https://avatars3.githubusercontent.com/in/505?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/309946?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/7022740?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/3984438?s=40&v=4"
+    ]
+  },
+  {
+    "author": "dawnlabs",
+    "repo": "dawnlabs/carbon",
+    "repo_link": "https://github.com/dawnlabs/carbon",
+    "desc": "🎨 Create and share beautiful images of your source code",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "14,359",
+    "forks": "642",
+    "activity": "147 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/8397708?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/10369094?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/10078572?s=40&v=4",
+      "https://avatars3.githubusercontent.com/in/505?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/10191084?s=40&v=4"
+    ]
+  },
+  {
+    "author": "TheAlgorithms",
+    "repo": "TheAlgorithms/Python",
+    "repo_link": "https://github.com/TheAlgorithms/Python",
+    "desc": "All Algorithms implemented in Python",
+    "lang": "Python",
+    "color": "#3572A5",
+    "stars": "7,490",
+    "forks": "2,811",
+    "activity": "142 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/14276147?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/14369357?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/23243382?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/17557934?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/3709715?s=40&v=4"
+    ]
+  },
+  {
+    "author": "saket",
+    "repo": "saket/InboxRecyclerView",
+    "repo_link": "https://github.com/saket/InboxRecyclerView",
+    "desc": "Build expandable descendant navigation, inspired by Google Inbox",
+    "lang": "Kotlin",
+    "color": "#F18E33",
+    "stars": "209",
+    "forks": "4",
+    "activity": "149 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/2387680?s=40&v=4"
+    ]
+  },
+  {
+    "author": "facebookincubator",
+    "repo": "facebookincubator/Bowler",
+    "repo_link": "https://github.com/facebookincubator/Bowler",
+    "desc": "Safe code refactoring for modern Python.",
+    "lang": "Python",
+    "color": "#3572A5",
+    "stars": "532",
+    "forks": "15",
+    "activity": "130 stars today",
+    "avatars": [
+      "https://avatars2.githubusercontent.com/u/6444?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/4646767?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/6357330?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/807580?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/55281?s=40&v=4"
+    ]
+  },
+  {
+    "author": "date-fns",
+    "repo": "date-fns/date-fns",
+    "repo_link": "https://github.com/date-fns/date-fns",
+    "desc": "⏳ Modern JavaScript date utility library ⌛️",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "13,268",
+    "forks": "483",
+    "activity": "122 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/566319?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/52201?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/664335?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/385424?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/4540763?s=40&v=4"
+    ]
+  },
+  {
+    "author": "Snailclimb",
+    "repo": "Snailclimb/JavaGuide",
+    "repo_link": "https://github.com/Snailclimb/JavaGuide",
+    "desc": "A core knowledge that most Java programmers need to master",
+    "lang": "Java",
+    "color": "#b07219",
+    "stars": "5,397",
+    "forks": "1,305",
+    "activity": "106 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/29880145?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/20039931?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/23185249?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/35571479?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/32627510?s=40&v=4"
+    ]
+  },
+  {
+    "author": "Avik-Jain",
+    "repo": "Avik-Jain/100-Days-Of-ML-Code",
+    "repo_link": "https://github.com/Avik-Jain/100-Days-Of-ML-Code",
+    "desc": "100 Days of ML Coding",
+    "lang": "Unknown",
+    "stars": "14,211",
+    "forks": "2,616",
+    "activity": "109 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/30073708?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/35194045?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/1131070?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/17466938?s=40&v=4",
+      "https://avatars3.githubusercontent.com/u/3709715?s=40&v=4"
+    ]
+  },
+  {
+    "author": "vuejs",
+    "repo": "vuejs/vue",
+    "repo_link": "https://github.com/vuejs/vue",
+    "desc": "🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
+    "lang": "JavaScript",
+    "color": "#f1e05a",
+    "stars": "113,970",
+    "forks": "16,040",
+    "activity": "108 stars today",
+    "avatars": [
+      "https://avatars2.githubusercontent.com/u/499550?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/8401776?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/2603918?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/72989?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/664177?s=40&v=4"
+    ]
+  },
+  {
+    "author": "CyC2018",
+    "repo": "CyC2018/CS-Notes",
+    "repo_link": "https://github.com/CyC2018/CS-Notes",
+    "desc": "📚 Computer Science Learning Notes",
+    "lang": "Unknown",
+    "stars": "35,872",
+    "forks": "10,557",
+    "activity": "102 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/36260787?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/22954582?s=40&v=4",
+      "https://avatars0.githubusercontent.com/u/15684156?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/28261876?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/7719370?s=40&v=4"
+    ]
+  },
+  {
+    "author": "gabriellamas",
+    "repo": "gabriellamas/Fancy-Checkout",
+    "repo_link": "https://github.com/gabriellamas/Fancy-Checkout",
+    "desc": "A animated experience for your checkout !",
+    "lang": "CSS",
+    "color": "#563d7c",
+    "stars": "259",
+    "forks": "35",
+    "activity": "109 stars today",
+    "avatars": [
+      "https://avatars1.githubusercontent.com/u/2272600?s=40&v=4"
+    ]
+  },
+  {
+    "author": "sayazamurai",
+    "repo": "sayazamurai/python-vs-javascript",
+    "repo_link": "https://github.com/sayazamurai/python-vs-javascript",
+    "desc": null,
+    "lang": "HTML",
+    "color": "#e34c26",
+    "stars": "113",
+    "forks": "8",
+    "activity": "108 stars today",
+    "avatars": [
+      "https://avatars0.githubusercontent.com/u/32041845?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/14354736?s=40&v=4",
+      "https://avatars2.githubusercontent.com/u/8203572?s=40&v=4",
+      "https://avatars1.githubusercontent.com/u/14136435?s=40&v=4"
+    ]
+  }
+]

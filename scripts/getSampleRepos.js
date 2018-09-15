@@ -1,6 +1,8 @@
-import cheerio from 'cheerio';
+const cheerio = require('cheerio');
+const fetch = require('node-fetch');
+const fs = require('fs');
 
-export const getPopularRepos = async ({timeSpan = "daily", language = ""} = {}) => {
+const getPopularRepos = async ({timeSpan = "daily", language = ""} = {}) => {
   const result = await fetch(`https://github.com/trending/${language}?since=${timeSpan}`);
   const text = await result.text();
   const $ = cheerio.load(text);
@@ -39,3 +41,9 @@ export const getPopularRepos = async ({timeSpan = "daily", language = ""} = {}) 
 
   return repos;
 };
+
+(async () => {
+  const result = await getPopularRepos();
+  console.log(result);
+  fs.writeFileSync('./sampleRepos.json', JSON.stringify(result, null, 2))
+})();
