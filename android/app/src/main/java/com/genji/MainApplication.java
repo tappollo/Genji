@@ -3,6 +3,7 @@ package com.genji;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.iou90.autoheightwebview.AutoHeightWebViewPackage;
 import com.apsl.versionnumber.RNVersionNumberPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import cl.json.RNSharePackage;
@@ -32,6 +33,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new AutoHeightWebViewPackage(),
             new RNVersionNumberPackage(),
             new VectorIconsPackage(),
             new RNSharePackage(),
