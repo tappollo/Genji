@@ -63,12 +63,21 @@ const Readme = ({ repo, onReady, style }) => (
     }}
     source={{ url: `https://github.com/${repo}/blob/master/README.md` }}
     customScript={`
-	window.onclick = function(e) {
-		if (e.target.tagName === "A") {
-		  window.postMessage(e.target.href);
-		}
-		return false;
-	};
+    var elements = document.getElementsByTagName('a');
+    for(var i = 0, len = elements.length; i < len; i++) {
+        elements[i].onclick = function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+            window.postMessage(this.href);
+            return false;
+        }
+    }
+    window.onclick = function(e) {
+      if (e.target.tagName === "A") {
+        window.postMessage(e.target.href);
+      }
+      return false;
+    };
     `}
     customStyle={`
         header.Header, .reponav-wrapper.lh-default, .breadcrumb.blob-breadcrumb, footer {

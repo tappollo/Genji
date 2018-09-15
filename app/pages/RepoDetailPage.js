@@ -16,6 +16,7 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 const Container = styled.View`
   flex: 1;
   background-color: white;
+  padding-top: ${getStatusBarHeight(true)};
 `;
 
 const Loading = () => (
@@ -40,7 +41,7 @@ Loading.Text = styled.Text`
 
 const Banner = ({ style, repo }) => (
   <Banner.Container style={style}>
-    <Banner.BlurBackground />
+    <BlurBackground />
     <Banner.Texts>
       <Banner.Title>{repo.repo}</Banner.Title>
       <Banner.Subtitle>{repo.desc}</Banner.Subtitle>
@@ -84,7 +85,7 @@ Banner.Container = styled(Animated.View)`
   padding: 0 20px;
 `;
 
-Banner.BlurBackground = styled(BlurView).attrs({
+const BlurBackground = styled(BlurView).attrs({
   blurType: "xlight"
 })`
   position: absolute;
@@ -95,22 +96,41 @@ Banner.BlurBackground = styled(BlurView).attrs({
 `;
 
 const TopSpacer = styled.View`
-  height: ${getStatusBarHeight(true) + 44};
+  height: 44px;
 `;
 
 const BottomSpacer = styled.View`
   height: ${getBottomSpace() + 100};
 `;
 
-const CloseButton = styled(Ionicons).attrs({
-  name: "ios-close-circle",
+const BackButton = ({onPress}) => (
+  <BackButton.Container onPress={onPress}>
+    <BackButton.Icon />
+  </BackButton.Container>
+);
+
+BackButton.Container = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.95
+})`
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  border-radius: 22px;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  top: ${getStatusBarHeight(true) + 5};
+  left: 10px;
+  background-color: white;
+`;
+
+BackButton.Icon = styled(Ionicons).attrs({
+  name: "ios-arrow-back",
   size: 30,
 })`
   color: gray;
-  position: absolute;
-  top: ${getStatusBarHeight(true)};
-  right: 10px;
-  padding: 10px;
+  padding-right: 5px;
+  padding-top: 3px;
 `;
 
 const RepoDetailPage = ({ navigation }) => (
@@ -156,7 +176,7 @@ const RepoDetailPage = ({ navigation }) => (
           />
           <BottomSpacer />
         </ScrollView>
-        <CloseButton onPress={() => navigation.pop()}/>
+        <BackButton onPress={() => navigation.pop()}/>
         <Banner
           repo={navigation.getParam("repo")}
           style={{
