@@ -11,6 +11,4 @@ target 'Genji' do
   pod 'Firebase/Crash'
   pod 'Firebase/DynamicLinks'
   pod 'Firebase/RemoteConfig'
-
-  pod 'FirebaseUI/Auth'
 end
