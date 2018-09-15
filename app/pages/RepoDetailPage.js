@@ -11,11 +11,11 @@ import Readme from "../components/Readme";
 import { ActivityIndicator, Animated, ScrollView } from "react-native";
 import { BlurView } from "react-native-blur";
 import StarButton from "../components/StarButton";
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 const Container = styled.View`
   flex: 1;
   background-color: white;
-  padding-top: ${getStatusBarHeight(true)};
 `;
 
 const Loading = () => (
@@ -94,8 +94,23 @@ Banner.BlurBackground = styled(BlurView).attrs({
   right: 0;
 `;
 
+const TopSpacer = styled.View`
+  height: ${getStatusBarHeight(true) + 44};
+`;
+
 const BottomSpacer = styled.View`
   height: ${getBottomSpace() + 100};
+`;
+
+const CloseButton = styled(Ionicons).attrs({
+  name: "ios-close-circle",
+  size: 30,
+})`
+  color: gray;
+  position: absolute;
+  top: ${getStatusBarHeight(true)};
+  right: 10px;
+  padding: 10px;
 `;
 
 const RepoDetailPage = ({ navigation }) => (
@@ -122,6 +137,7 @@ const RepoDetailPage = ({ navigation }) => (
             object.previousOffset = newOffset;
           }}
         >
+          <TopSpacer />
           <RepoCard {...navigation.getParam("repo")} />
           <Onmount>
             {async () => {
@@ -140,6 +156,7 @@ const RepoDetailPage = ({ navigation }) => (
           />
           <BottomSpacer />
         </ScrollView>
+        <CloseButton onPress={() => navigation.pop()}/>
         <Banner
           repo={navigation.getParam("repo")}
           style={{
