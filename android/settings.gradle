@@ -1,0 +1,3 @@
+rootProject.name = 'Genji'
+
+include ':app'
