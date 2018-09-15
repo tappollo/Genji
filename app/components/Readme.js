@@ -16,7 +16,7 @@ const template = html => `
 <script type="text/javascript">
 	window.onclick = function(e) { 
 		if (e.target.tagName === "A") {
-		  window.location.href = "genji://safari?url=" + decodeURIComponent(e.target.href);
+		  window.postMessage(e.target.href);
 		}
 		return false; 
 	};
@@ -36,38 +36,31 @@ const template = html => `
 		}
 	}
 </style>
+<article class="markdown-body">
 ${html}
+</article>
 </body>
 </html>
 `;
 
 const Readme = ({ children, onReady, ...props }) => (
   <Fragment>
-    <Onmount callOnUnmount>
-      {({ mount, object }) => {
-        if (mount) {
-          object.onURL = async ({ url }) => {
-            const decoded = decodeURIComponent(
-              url.replace("genji://safari?url=", "")
-            );
-            if (!decoded) {
-              return;
-            }
-            if (await SafariView.isAvailable()) {
-              SafariView.show({url: decoded})
-            } else {
-              Linking.openURL(decoded);
-            }
-          };
-          Linking.addEventListener("url", object.onURL);
-        } else {
-          Linking.removeEventListener("url", object.onURL);
-        }
-      }}
-    </Onmount>
     <AutoHeightWebView
       enableAnimation={false}
-      onLoadEnd={onReady}
+      onLoadEnd={() => {
+        onReady()
+      }}
+      onMessage={async event => {
+        const url = event?.nativeEvent?.data;
+        if (!url) {
+          return;
+        }
+        if (await SafariView.isAvailable()) {
+          SafariView.show({ url });
+        } else {
+          Linking.openURL(url);
+        }
+      }}
       source={{ html: template(children) }}
       {...props}
     />
