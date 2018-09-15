@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FastImage from "react-native-fast-image";
 import Stateful from "../functionComponents/Stateful";
+import StarButton from "./StarButton";
 
 const Container = styled(Animated.View)`
   margin: 10px 20px;
@@ -62,20 +63,6 @@ const Avatar = styled(FastImage)`
   margin-right: 3px;
 `;
 
-const Star = styled.TouchableOpacity`
-  padding: 0 20px;
-  height: 30px;
-  border-radius: 15px;
-  background-color: ${({ selected }) => (selected ? "#007AFF" : "#F0F1F6")};
-  justify-content: center;
-  align-items: center;
-`;
-
-Star.Text = styled.Text`
-  color: ${({ selected }) => (selected ? "white" : "#007AFF")};
-  font-size: 15px;
-  font-weight: 700;
-`;
 
 const RepoCard = ({
   repo,
@@ -136,9 +123,7 @@ const RepoCard = ({
               <Avatar key={url} source={{ uri: url }} />
             ))}
             <View style={{ flex: 1 }} />
-            <Star>
-              <Star.Text>Star</Star.Text>
-            </Star>
+            <StarButton />
           </InfoRow>
         </Container>
       </TouchableWithoutFeedback>

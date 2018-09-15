@@ -1,14 +1,14 @@
 import RepoCard from "../components/RepoCard";
 import React from "react";
-import {SectionList} from "react-native";
+import { SectionList } from "react-native";
 import dummy from "../../scripts/sampleRepos";
 import styled from "styled-components";
-import {getStatusBarHeight} from "react-native-iphone-x-helper";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 
 const sections = [{ data: dummy, title: "Today", subtitle: "MONDAY, JUNE 5" }];
 
 const List = styled(SectionList).attrs({
-  stickySectionHeadersEnabled: false,
+  stickySectionHeadersEnabled: false
 })`
   flex: 1;
 `;
@@ -18,7 +18,7 @@ const StatusbarOverlay = styled.View`
   background-color: white;
 `;
 
-const Header = ({title, subtitle}) => (
+const Header = ({ title, subtitle }) => (
   <Header.Container>
     <Header.Title>{title}</Header.Title>
     <Header.Subtitle>{subtitle}</Header.Subtitle>
@@ -38,7 +38,7 @@ Header.Title = styled.Text`
 
 Header.Subtitle = styled.Text`
   font-weight: 600;
-  color: #8E8E93;
+  color: #8e8e93;
   font-size: 12px;
 `;
 
@@ -47,14 +47,19 @@ const Container = styled.View`
   background-color: white;
 `;
 
-const TodayPage = ({navigation}) => (
+const TodayPage = ({ navigation }) => (
   <Container>
     <StatusbarOverlay />
     <List
       sections={sections}
-      renderItem={({ item }) => <RepoCard {...item} onPress={() => {
-        navigation.navigate('RepoDetailPage');
-      }}/>}
+      renderItem={({ item }) => (
+        <RepoCard
+          {...item}
+          onPress={() => {
+            navigation.navigate("RepoDetailPage", {repo: item});
+          }}
+        />
+      )}
       renderSectionHeader={({ section }) => (
         <Header title={section.title} subtitle={section.subtitle} />
       )}
