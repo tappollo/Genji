@@ -1,9 +1,9 @@
 import RepoCard from "../components/RepoCard";
-import React, { Fragment } from "react";
-import { FlatList, SectionList } from "react-native";
+import React from "react";
+import {SectionList} from "react-native";
 import dummy from "../../scripts/sampleRepos";
 import styled from "styled-components";
-import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import {getStatusBarHeight} from "react-native-iphone-x-helper";
 
 const sections = [{ data: dummy, title: "Today", subtitle: "MONDAY, JUNE 5" }];
 
@@ -27,7 +27,6 @@ const Header = ({title, subtitle}) => (
 
 Header.Container = styled.View`
   padding: 26px 20px 5px;
-  background-color: white;
 `;
 
 Header.Title = styled.Text`
@@ -41,20 +40,27 @@ Header.Subtitle = styled.Text`
   font-weight: 600;
   color: #8E8E93;
   font-size: 12px;
-`
+`;
 
-const TodayPage = () => (
-  <Fragment>
+const Container = styled.View`
+  flex: 1;
+  background-color: white;
+`;
+
+const TodayPage = ({navigation}) => (
+  <Container>
     <StatusbarOverlay />
     <List
       sections={sections}
-      renderItem={({ item }) => <RepoCard {...item} />}
+      renderItem={({ item }) => <RepoCard {...item} onPress={() => {
+        navigation.navigate('RepoDetailPage');
+      }}/>}
       renderSectionHeader={({ section }) => (
         <Header title={section.title} subtitle={section.subtitle} />
       )}
       keyExtractor={({ repo }) => repo}
     />
-  </Fragment>
+  </Container>
 );
 
 TodayPage.navigationOptions = {

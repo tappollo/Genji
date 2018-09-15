@@ -5,26 +5,6 @@ import Ionicons from "react-native-vector-icons/Ionicons";
 import FastImage from "react-native-fast-image";
 import Stateful from "../functionComponents/Stateful";
 
-const item = {
-  author: "vuejs",
-  repo: "vuejs/vue",
-  repo_link: "https://github.com/vuejs/vue",
-  desc:
-    "🖖 A progressive, incrementally-adoptable JavaScript framework for building UI on the web.",
-  lang: "JavaScript",
-  color: "#f1e05a",
-  stars: "113,969",
-  forks: "16,040",
-  activity: "623 stars today",
-  avatars: [
-    "https://avatars2.githubusercontent.com/u/499550?s=40&v=4",
-    "https://avatars2.githubusercontent.com/u/8401776?s=40&v=4",
-    "https://avatars2.githubusercontent.com/u/2603918?s=40&v=4",
-    "https://avatars0.githubusercontent.com/u/72989?s=40&v=4",
-    "https://avatars0.githubusercontent.com/u/664177?s=40&v=4"
-  ]
-};
-
 const Container = styled(Animated.View)`
   margin: 10px 20px;
   padding: 15px;
@@ -58,6 +38,7 @@ const InfoRow = styled.View`
   flex-direction: row;
   align-items: center;
   margin-top: 15px;
+  flex-wrap: wrap;
 `;
 
 const InfoText = styled.Text`

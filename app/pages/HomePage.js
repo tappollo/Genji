@@ -1,9 +1,10 @@
-import { createBottomTabNavigator } from "react-navigation";
+import { createBottomTabNavigator, createStackNavigator } from "react-navigation";
 import TodayPage from "./TodayPage";
 import StarredPage from "./StarredPage";
 import LanguagesPage from "./LanguagesPage";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import RepoDetailPage from "./RepoDetailPage";
 
 const Icons = (focused) => ({
   TodayPage: "ios-today",
@@ -11,7 +12,7 @@ const Icons = (focused) => ({
   LanguagesPage: focused ? "ios-square" : 'ios-square-outline',
 });
 
-const HomePage = createBottomTabNavigator(
+const Tabs = createBottomTabNavigator(
   {
     TodayPage,
     LanguagesPage,
@@ -22,8 +23,6 @@ const HomePage = createBottomTabNavigator(
       tabBarIcon: ({ focused, tintColor }) => {
         const { routeName } = navigation.state;
         const iconName = Icons(focused)[routeName];
-        // You can return any component that you like here! We usually use an
-        // icon component from react-native-vector-icons
         return <Ionicons name={iconName} size={25} color={tintColor} />;
       },
     }),
@@ -32,5 +31,13 @@ const HomePage = createBottomTabNavigator(
     }
   }
 );
+
+const HomePage = createStackNavigator({
+  Tabs,
+  RepoDetailPage,
+}, {
+  initialRoute: Tabs,
+  headerMode: 'none',
+});
 
 export default HomePage;
