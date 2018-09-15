@@ -9,6 +9,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View, Linking} from 'react-native';
 import {auth} from "react-native-firebase";
+import SafariView from 'react-native-safari-view';
+import githubOauth from "./app/network/githubOauth";
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -19,10 +21,15 @@ const instructions = Platform.select({
 
 type Props = {};
 export default class App extends Component<Props> {
+  onURL = async (url) => {
+    await SafariView.dismiss();
+    alert(JSON.stringify(url));
+  };
   async componentDidMount() {
     try {
-      // await auth().signInAnonymouslyAndRetrieveData()
-      Linking.openURL("https://github.com/login/oauth/authorize?client_id=daa3ed310bf7c0d7ba1e&redirect_uri=https://genjiapp.firebaseapp.com/__/auth/handler")
+      const {access_token} = await githubOauth.start();
+      const credential = auth.GithubAuthProvider.credential(access_token);
+      await auth().signInAndRetrieveDataWithCredential(credential);
     } catch (e) {
       alert(e)
     }
