@@ -6,6 +6,9 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
     "lodash": "^4.17.11",
-    "node-fetch": "^2.2.0"
+    "node-fetch": "^2.2.0",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-persist": "^5.10.0"
   }
 }
