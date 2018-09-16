@@ -43,7 +43,8 @@ const getPopularRepos = async ({timeSpan = "daily", language = ""} = {}) => {
 };
 
 (async () => {
+  console.time("Get")
   const result = await getPopularRepos();
-  console.log(result);
   fs.writeFileSync('./sampleRepos.json', JSON.stringify(result, null, 2))
+  console.timeEnd("Get")
 })();

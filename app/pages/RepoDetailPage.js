@@ -157,7 +157,12 @@ const RepoDetailPage = ({ navigation }) => (
             object.previousOffset = newOffset;
           }}
         >
-          <TopSpacer />
+          <TopSpacer onLayout={e => {
+            const width = e?.nativeEvent?.layout?.width;
+            if (width && width !== state.width) {
+              setState({width})
+            }
+          }}/>
           <RepoCard {...navigation.getParam("repo")} />
           <Onmount>
             {async () => {
@@ -170,7 +175,7 @@ const RepoDetailPage = ({ navigation }) => (
           </Onmount>
           {!state.ready && <Loading />}
           <Readme
-            style={{opacity: state.ready ? 1 : 0}}
+            style={{opacity: state.ready ? 1 : 0, width: state.width}}
             onReady={() => { !state.ready && setState({ ready: true }); }}
             repo={ navigation.getParam("repo").repo }
           />
