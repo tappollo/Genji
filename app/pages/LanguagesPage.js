@@ -3,7 +3,7 @@ import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import React from "react";
 import LanguageSection from "../components/LanguageSection";
 import { FlatList } from "react-native";
-import { featuredLanguages } from "../network/githubLanguages";
+import {connect} from "react-redux";
 
 const Container = styled.View`
   padding-top: ${getStatusBarHeight(true)};
@@ -52,7 +52,7 @@ Footer.Container = styled.TouchableOpacity`
   align-items: center;
 `;
 
-const LanguagesPage = ({ navigation }) => (
+const LanguagesPage = ({ navigation, featuredLanguages }) => (
   <Container>
     <FlatList
       ListHeaderComponent={() => <Header>Featured</Header>}
@@ -83,4 +83,6 @@ LanguagesPage.navigationOptions = {
   title: "All Languages"
 };
 
-export default LanguagesPage;
+export default connect(state => ({
+  featuredLanguages: state.featured
+}))(LanguagesPage);

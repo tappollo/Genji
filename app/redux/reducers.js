@@ -1,5 +1,7 @@
 import {featuredLanguages} from "../network/githubLanguages";
-const user = (state, action) => {
+import {combineReducers} from 'redux';
+
+const user = (state = null, action) => {
   if (action.type === "UPDATE_USER") {
     return action.payload;
   }
@@ -11,9 +13,13 @@ const featured = (state = featuredLanguages, {type, payload}) => {
     if (state.includes(payload)) {
       return state.filter(a => a !== payload);
     } else {
-      return state.concat(payload);
+      return [payload, ...state];
     }
   }
+  return state;
 };
 
-combineReducer
+export default combineReducers({
+  user,
+  featured,
+});

@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 
-const RoundButton = ({ title, selected }) => (
-  <RoundButton.Container selected={selected}>
+const RoundButton = ({ title, selected, onPress }) => (
+  <RoundButton.Container selected={selected} onPress={onPress}>
     <RoundButton.Text selected={selected}>{title}</RoundButton.Text>
   </RoundButton.Container>
 );
