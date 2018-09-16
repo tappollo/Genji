@@ -65,6 +65,9 @@ const LanguagesPage = ({ navigation }) => (
       renderItem={({ item }) => (
         <LanguageSection
           language={item}
+          onSeeAll={() =>
+            navigation.navigate("LanguageDetailPage", { lang: item })
+          }
           onSelect={item =>
             navigation.navigate("RepoDetailPage", { repo: item })
           }

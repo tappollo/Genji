@@ -9,6 +9,7 @@ import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import RepoDetailPage from "./RepoDetailPage";
 import AllLanguages from "./AllLanguages";
+import LanguageDetailPage from "./LanguageDetailPage";
 
 const Icons = focused => ({
   TodayPage: "ios-today",
@@ -18,8 +19,8 @@ const Icons = focused => ({
 
 const Tabs = createBottomTabNavigator(
   {
-    LanguagesPage,
     TodayPage,
+    LanguagesPage,
     StarredPage
   },
   {
@@ -39,11 +40,11 @@ const Tabs = createBottomTabNavigator(
 const HomePage = createStackNavigator(
   {
     Tabs,
-    RepoDetailPage,
     AllLanguages,
+    RepoDetailPage,
+    LanguageDetailPage,
   },
   {
-    initialRoute: Tabs,
     headerMode: "none",
   }
 );

@@ -2,6 +2,7 @@ const cheerio = require('cheerio');
 const fetch = require('node-fetch');
 const colors = require('./colors.json');
 const fs = require('fs');
+const _ = require('lodash');
 
 const getPopularRepos = async () => {
   const linkValueRegex = /\/trending\/?(.*)\?since=.*/;
@@ -37,7 +38,7 @@ const getPopularRepos = async () => {
 
   return {
     featured,
-    allLanguages,
+    allLanguages: _.uniq(allLanguages),
     languages,
   };
 };

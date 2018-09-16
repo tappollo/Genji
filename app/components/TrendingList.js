@@ -1,26 +1,32 @@
 import styled from "styled-components";
-import { SectionList, ActivityIndicator } from "react-native";
-import Stateful, {
-  Onmount,
-  OnMountAndUnMount
-} from "../functionComponents/Stateful";
-import React, { Fragment } from "react";
+import {ActivityIndicator, SectionList} from "react-native";
+import Stateful, {OnMountAndUnMount} from "../functionComponents/Stateful";
+import React, {Fragment} from "react";
 import RepoCard from "./RepoCard";
-import dummy from "../../scripts/sampleRepos";
-import { loadTrending, trendingEvent } from "../network/githubHTML";
+import {loadTrending, trendingEvent} from "../network/githubHTML";
 import dayjs from "dayjs";
+import {getLanguageName, isLanguageFeatured} from "../network/githubLanguages";
+import RoundButton from "./RoundButton";
+import PinLanguageButton from "./PinLanguageButton";
 
-const sections = [{ data: dummy, title: "Today", subtitle: "MONDAY, JUNE 5" }];
-
-const Header = ({ title, subtitle }) => (
+const Header = ({ title, subtitle, language }) => (
   <Header.Container>
-    <Header.Title>{title}</Header.Title>
-    <Header.Subtitle>{subtitle}</Header.Subtitle>
+    <Header.Texts>
+      <Header.Title>{title}</Header.Title>
+      <Header.Subtitle>{subtitle}</Header.Subtitle>
+    </Header.Texts>
+    {language ? <PinLanguageButton language={language} /> : null}
   </Header.Container>
 );
 
 Header.Container = styled.View`
   padding: 26px 20px 5px;
+  flex-direction: row;
+  align-items: center;
+`;
+
+Header.Texts = styled.View`
+  flex: 1;
 `;
 
 Header.Title = styled.Text`
@@ -54,15 +60,16 @@ Loading.Container = styled.View`
   align-items: center;
 `;
 
-const sectionsFrom = ({ daily, weekly, monthly }) => {
+const sectionsFrom = ({ daily, weekly, monthly, language }) => {
   const sections = [];
   if (daily) {
+    const subtitle = dayjs()
+      .format("dddd MMMM D")
+      .toUpperCase();
     sections.push({
       data: daily,
-      title: "Today",
-      subtitle: dayjs()
-        .format("dddd MMMM D")
-        .toUpperCase()
+      title: getLanguageName(language) || "Today",
+      subtitle: language ? "TODAY " + subtitle : subtitle
     });
   }
   if (weekly) {
@@ -92,8 +99,12 @@ const sectionsFrom = ({ daily, weekly, monthly }) => {
   return sections;
 };
 
+const TopSpacer = styled.View`
+  height: 44px;
+`;
+
 const TrendingList = ({ language = "", onSelect }) => (
-  <Stateful>
+  <Stateful state={{ language }}>
     {({ state, setState, object }) => (
       <Fragment>
         <OnMountAndUnMount>
@@ -128,6 +139,7 @@ const TrendingList = ({ language = "", onSelect }) => (
           <Loading />
         ) : (
           <List
+            ListHeaderComponent={language && TopSpacer}
             sections={sectionsFrom(state)}
             renderItem={({ item }) => (
               <RepoCard
@@ -138,7 +150,11 @@ const TrendingList = ({ language = "", onSelect }) => (
               />
             )}
             renderSectionHeader={({ section }) => (
-              <Header title={section.title} subtitle={section.subtitle} />
+              <Header
+                language={language}
+                title={section.title}
+                subtitle={section.subtitle}
+              />
             )}
             keyExtractor={({ repo }) => repo}
           />

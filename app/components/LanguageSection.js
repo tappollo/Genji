@@ -20,11 +20,25 @@ const Title = styled.Text`
 const TopRow = styled.View`
   flex-direction: row;
   align-items: center;
-  padding: 0 20px;
+  padding-left: 20px;
   margin-top: 10px;
 `;
 
-const SeeAll = styled.Text`
+const SeeAll = ({children, onPress}) => (
+  <SeeAll.Button onPress={onPress}>
+    <SeeAll.Text>{children}</SeeAll.Text>
+  </SeeAll.Button>
+);
+
+SeeAll.Button = styled.TouchableOpacity.attrs({
+  activeOpacity: 0.9
+})`
+  height: 35px;
+  justify-content: center;
+  padding: 0 20px;
+`;
+
+SeeAll.Text = styled.Text`
   font-size: 18px;
   color: #007aff;
 `;
@@ -50,7 +64,7 @@ Loading.Text = styled.Text`
 const List = styled(FlatList)`
 `;
 
-const LanguageSection = ({ language, onSelect }) => (
+const LanguageSection = ({ language, onSelect, onSeeAll }) => (
   <Stateful state={{loading: true}}>
     {({ state, setState }) => (
       <Container>
@@ -69,7 +83,7 @@ const LanguageSection = ({ language, onSelect }) => (
         </OnMountAndUnMount>
         <TopRow>
           <Title>{getLanguageName(language)}</Title>
-          <SeeAll>See All</SeeAll>
+          <SeeAll onPress={onSeeAll}>See All</SeeAll>
         </TopRow>
         {state.loading && <Loading />}
         {state.data && (
@@ -81,6 +95,11 @@ const LanguageSection = ({ language, onSelect }) => (
             decelerationRate={0}
             horizontal
             data={state.data}
+            getItemLayout={(data, index) => ({
+              length: screenWidth * 0.85 + 20,
+              offset: (screenWidth * 0.85 + 20) * index,
+              index,
+            })}
             renderItem={({ item }) => (
               <RepoCard
                 {...item}

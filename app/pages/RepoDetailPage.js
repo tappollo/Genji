@@ -1,17 +1,14 @@
 import React from "react";
 import styled from "styled-components";
-import Stateful, { Onmount } from "../functionComponents/Stateful";
+import Stateful, {Onmount} from "../functionComponents/Stateful";
 import RepoCard from "../components/RepoCard";
-import {
-  getBottomSpace,
-  getStatusBarHeight
-} from "react-native-iphone-x-helper";
-import { getReadmeContent } from "../network/githubAPI";
+import {getBottomSpace, getStatusBarHeight} from "react-native-iphone-x-helper";
+import {getReadmeContent} from "../network/githubAPI";
 import Readme from "../components/Readme";
-import { ActivityIndicator, Animated, ScrollView } from "react-native";
-import { BlurView } from "react-native-blur";
+import {ActivityIndicator, Animated, ScrollView} from "react-native";
+import {BlurView} from "react-native-blur";
 import StarButton from "../components/StarButton";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import {BackButton} from "../components/BackButton";
 
 const Container = styled.View`
   flex: 1;
@@ -101,36 +98,6 @@ const TopSpacer = styled.View`
 
 const BottomSpacer = styled.View`
   height: ${getBottomSpace() + 100};
-`;
-
-const BackButton = ({onPress}) => (
-  <BackButton.Container onPress={onPress}>
-    <BackButton.Icon />
-  </BackButton.Container>
-);
-
-BackButton.Container = styled.TouchableOpacity.attrs({
-  activeOpacity: 0.95
-})`
-  position: absolute;
-  width: 44px;
-  height: 44px;
-  border-radius: 22px;
-  overflow: hidden;
-  align-items: center;
-  justify-content: center;
-  top: ${getStatusBarHeight(true) + 5};
-  left: 10px;
-  background-color: white;
-`;
-
-BackButton.Icon = styled(Ionicons).attrs({
-  name: "ios-arrow-back",
-  size: 30,
-})`
-  color: gray;
-  padding-right: 5px;
-  padding-top: 3px;
 `;
 
 const RepoDetailPage = ({ navigation }) => (

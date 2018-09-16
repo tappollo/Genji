@@ -1,12 +1,13 @@
 import cheerio from 'cheerio';
 import EventEmitter from 'eventemitter3';
 import fs from 'react-native-fs';
+import dayjs from "dayjs";
 
 export const trendingEvent = new EventEmitter();
 
 const getOnDiskVersion = async (key) => {
   try {
-    const string = await fs.readFile(`${fs.DocumentDirectoryPath}/${key}.json`, 'utf8');
+    const string = await fs.readFile(`${fs.DocumentDirectoryPath}/genji_${key}.json`, 'utf8');
     return string && JSON.parse(string);
   } catch (e) {
     return null;
@@ -15,7 +16,7 @@ const getOnDiskVersion = async (key) => {
 
 const saveToDisk = async (key, data) => {
   try {
-    await fs.writeFile(`${fs.DocumentDirectoryPath}/${key}.json`, JSON.stringify(data), 'utf8')
+    await fs.writeFile(`${fs.DocumentDirectoryPath}/genji_${key}.json`, JSON.stringify(data), 'utf8')
   } catch (e) {
     alert(e);
   }
@@ -26,27 +27,30 @@ const fetchingInProgress = {};
 export const loadTrending = async ({timeSpan = "daily", language = ""} = {}) => {
   const key = `${timeSpan}_${language}`;
   const cached = await getOnDiskVersion(key);
-  if (cached) {
+  if (cached && dayjs(cached.timestamp).isAfter(dayjs().subtract(1, 'day'))) {
     trendingEvent.emit(key, {
       type: 'cached',
-      data: cached,
+      data: cached.data,
     })
   } else {
     trendingEvent.emit(key, {
       type: 'loading',
     });
+    if (fetchingInProgress[key]) {
+      return;
+    }
+    fetchingInProgress[key] = true;
+    const newFromNetwork = await fetchLoadRepos({timeSpan, language});
+    trendingEvent.emit(key, {
+      type: 'newData',
+      data: newFromNetwork,
+    });
+    fetchingInProgress[key] = false;
+    await saveToDisk(key, {
+      timestamp: dayjs().format(),
+      data: newFromNetwork,
+    });
   }
-  if (fetchingInProgress[key]) {
-    return;
-  }
-  fetchingInProgress[key] = true;
-  const newFromNetwork = await fetchLoadRepos({timeSpan, language});
-  trendingEvent.emit(key, {
-    type: 'newData',
-    data: newFromNetwork,
-  });
-  fetchingInProgress[key] = false;
-  await saveToDisk(key, newFromNetwork);
 };
 
 const fetchLoadRepos = async ({timeSpan, language}) => {

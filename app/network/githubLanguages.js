@@ -4,6 +4,10 @@ export const getLanguageName = (language) => {
   return getLanguageDetail(language)?.name
 };
 
+export const isLanguageFeatured = (language) => {
+  return featuredLanguages.includes(language)
+};
+
 export const getLanguageDetail = (language) => {
   return languages[language];
 };
