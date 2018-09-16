@@ -26,6 +26,15 @@ const starred = (state = {}, {type, payload}) => {
       [payload]: !state[payload]
     }
   }
+  if (type === 'UPDATE_FROM_GRAPHQL') {
+    const newState = {...state};
+    payload.forEach(key => {
+      if (newState[key] === undefined) {
+        newState[key] = true;
+      }
+    });
+    return newState;
+  }
   return state;
 };
 

@@ -76,20 +76,22 @@ const Cell = ({
   stargazers,
   forks,
   mentionableUsers,
-  primaryLanguage
-}) => (
-  <RepoCard
-    repo={nameWithOwner}
-    activity={`starred ${dayjs(starredAt).fromNow()}`}
-    desc={description}
-    stars={stargazers.totalCount}
-    forks={forks.totalCount}
-    avatars={mentionableUsers.nodes.map(a => a.avatarUrl)}
-    lang={primaryLanguage?.name || "Unknown"}
-    color={primaryLanguage?.color || "gray"}
-    starred={true}
-  />
-);
+  primaryLanguage,
+  onSelect
+}) => {
+  const item = {
+    repo: nameWithOwner,
+    activity: `starred ${dayjs(starredAt).fromNow()}`,
+    desc: description,
+    stars: stargazers.totalCount,
+    forks: forks.totalCount,
+    avatars: mentionableUsers.nodes.map(a => a.avatarUrl),
+    lang: primaryLanguage?.name || "Unknown",
+    color: primaryLanguage?.color || "gray",
+    starred: true
+  };
+  return <RepoCard {...item} onPress={() => onSelect(item)} />;
+};
 
 const Footer = ({ error, loading, hasMore, onPress }) => (
   <Footer.Container>
@@ -126,13 +128,17 @@ Footer.Error = styled.Text`
   text-align: center;
 `;
 
-const StarredPage = ({ user, updateUser, updateStarred }) => (
+const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
   <Stateful>
     {({ state, setState }) => (
       <Container>
         {user ? (
           <Query
             query={STARRED_QUERY}
+            onCompleted={data => {
+              const entries = data.viewer.starredRepositories.nodes.map(a => a.nameWithOwner)
+              updateStarred(entries);
+            }}
             variables={{
               after: null
             }}
@@ -218,7 +224,14 @@ const StarredPage = ({ user, updateUser, updateStarred }) => (
                     />
                   )}
                   keyExtractor={value => value.nameWithOwner}
-                  renderItem={({ item }) => <Cell {...item} />}
+                  renderItem={({ item }) => (
+                    <Cell
+                      {...item}
+                      onSelect={item =>
+                        navigation.navigate("RepoDetailPage", { repo: item })
+                      }
+                    />
+                  )}
                 />
               );
             }}
@@ -245,6 +258,7 @@ export default connect(
     user: state.user
   }),
   dispatch => ({
-    updateUser: token => dispatch({ type: "UPDATE_USER", payload: token })
+    updateUser: token => dispatch({type: "UPDATE_USER", payload: token}),
+    updateStarred: payload => dispatch({type: 'UPDATE_FROM_GRAPHQL', payload})
   })
 )(StarredPage);

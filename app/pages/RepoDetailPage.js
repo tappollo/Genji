@@ -43,7 +43,7 @@ const Banner = ({ style, repo }) => (
       <Banner.Title>{repo.repo}</Banner.Title>
       <Banner.Subtitle>{repo.desc}</Banner.Subtitle>
     </Banner.Texts>
-    <StarButton selected/>
+    <StarButton repo={repo.repo}/>
   </Banner.Container>
 );
 

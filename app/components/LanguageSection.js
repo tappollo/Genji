@@ -88,6 +88,7 @@ const LanguageSection = ({ language, onSelect, onSeeAll }) => (
         {state.loading && <Loading />}
         {state.data && (
           <List
+            initialNumToRender={2}
             stickySectionHeadersEnabled={false}
             showsHorizontalScrollIndicator={false}
             snapToInterval={screenWidth * 0.85 + 20}

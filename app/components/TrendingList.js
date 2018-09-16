@@ -139,6 +139,7 @@ const TrendingList = ({ language = "", onSelect }) => (
           <Loading />
         ) : (
           <List
+            initialNumToRender={6}
             ListHeaderComponent={language && TopSpacer}
             sections={sectionsFrom(state)}
             renderItem={({ item }) => (
