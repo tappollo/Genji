@@ -1,16 +1,20 @@
 import React from "react";
 import styled from "styled-components";
-import Stateful, {Onmount} from "../functionComponents/Stateful";
+import Stateful, { Onmount } from "../functionComponents/Stateful";
 import RepoCard from "../components/RepoCard";
-import {getBottomSpace, getStatusBarHeight} from "react-native-iphone-x-helper";
-import {getReadmeContent} from "../network/githubAPI";
+import {
+  getBottomSpace,
+  getStatusBarHeight
+} from "react-native-iphone-x-helper";
+import { getReadmeContent } from "../network/githubAPI";
 import Readme from "../components/Readme";
-import {ActivityIndicator, Animated, ScrollView} from "react-native";
-import {BlurView} from "react-native-blur";
+import { Linking, ActivityIndicator, Animated, ScrollView } from "react-native";
+import { BlurView } from "react-native-blur";
 import StarButton from "../components/StarButton";
-import {BackButton} from "../components/BackButton";
+import { BackButton } from "../components/BackButton";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import Share from 'react-native-share';
+import Share from "react-native-share";
+import SafariView from "react-native-safari-view";
 
 const Container = styled.View`
   flex: 1;
@@ -45,7 +49,7 @@ const Banner = ({ style, repo }) => (
       <Banner.Title>{repo.repo}</Banner.Title>
       <Banner.Subtitle>{repo.desc}</Banner.Subtitle>
     </Banner.Texts>
-    <StarButton repo={repo.repo}/>
+    <StarButton repo={repo.repo} />
   </Banner.Container>
 );
 
@@ -55,7 +59,7 @@ Banner.Texts = styled.View`
 `;
 
 Banner.Title = styled.Text.attrs({
-  numberOfLines: 1,
+  numberOfLines: 1
 })`
   color: #444546;
   font-size: 16px;
@@ -63,7 +67,7 @@ Banner.Title = styled.Text.attrs({
 `;
 
 Banner.Subtitle = styled.Text.attrs({
-  numberOfLines: 2,
+  numberOfLines: 2
 })`
   margin-top: 3px;
   color: #464749;
@@ -94,9 +98,9 @@ const BlurBackground = styled(BlurView).attrs({
   right: 0;
 `;
 
-const TopSpacer = ({onPress}) => (
+const TopSpacer = ({ onPress }) => (
   <TopSpacer.Container onPress={onPress}>
-    <TopSpacer.Icon/>
+    <TopSpacer.Icon />
   </TopSpacer.Container>
 );
 
@@ -110,7 +114,7 @@ TopSpacer.Container = styled.TouchableOpacity`
 `;
 
 TopSpacer.Icon = styled(Ionicons).attrs({
-  name: 'ios-share',
+  name: "ios-share",
   size: 30
 })`
   color: #0366d6;
@@ -144,16 +148,31 @@ const RepoDetailPage = ({ navigation }) => (
             object.previousOffset = newOffset;
           }}
         >
-          <TopSpacer onPress={() => {
-            try {
-              Share.open({
-                url: `https://github.com/${navigation.getParam("repo").repo}`
-              })
-            } catch (e) {
-
-            }
-          }}/>
-          <RepoCard {...navigation.getParam("repo")} />
+          <TopSpacer
+            onPress={async () => {
+              try {
+                const param = navigation.getParam("repo");
+                const url = `https://github.com/${param.repo}`;
+                await Share.open({
+                  url,
+                  message: `${param.repo} ${param.desc} ${url}`
+                });
+              } catch (e) {}
+            }}
+          />
+          <RepoCard
+            {...navigation.getParam("repo")}
+            onPress={async () => {
+              const url = `https://github.com/${
+                navigation.getParam("repo").repo
+              }`;
+              if (await SafariView.isAvailable()) {
+                await SafariView.show({ url });
+              } else {
+                Linking.openURL(url);
+              }
+            }}
+          />
           <Onmount>
             {async () => {
               setState({
@@ -166,14 +185,16 @@ const RepoDetailPage = ({ navigation }) => (
           {!state.ready && <Loading />}
           {state.readmeURL && (
             <Readme
-              style={{opacity: state.ready ? 1 : 0, width: state.width}}
-              onReady={() => { !state.ready && setState({ ready: true }); }}
-              url={ state.readmeURL }
+              style={{ opacity: state.ready ? 1 : 0, width: state.width }}
+              onReady={() => {
+                !state.ready && setState({ ready: true });
+              }}
+              url={state.readmeURL}
             />
           )}
           <BottomSpacer />
         </ScrollView>
-        <BackButton onPress={() => navigation.pop()}/>
+        <BackButton onPress={() => navigation.pop()} />
         <Banner
           repo={navigation.getParam("repo")}
           style={{
