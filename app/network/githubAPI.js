@@ -1,6 +1,4 @@
-import EventEmitter from 'EventEmitter';
 
-const eventEmitter = new EventEmitter();
 
 export const getReadmeContent = async (repo) => {
   const response = await fetch(`https://api.github.com/repos/${repo}/contents/README.md`, {
