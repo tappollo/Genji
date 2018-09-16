@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import React, {Fragment} from "react";
+import React, { Fragment } from "react";
 import githubOauth from "../network/githubOauth";
 import { connect } from "react-redux";
 import LoginView from "../components/LoginView";
@@ -11,6 +11,7 @@ import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import Stateful from "../functionComponents/Stateful";
+import RectangleButton from "../components/RectangleButton";
 
 dayjs.extend(relativeTime);
 
@@ -86,6 +87,7 @@ const Cell = ({
     avatars={mentionableUsers.nodes.map(a => a.avatarUrl)}
     lang={primaryLanguage?.name || "Unknown"}
     color={primaryLanguage?.color || "gray"}
+    starred={true}
   />
 );
 
@@ -95,36 +97,20 @@ const Footer = ({ error, loading, hasMore, onPress }) => (
       <ActivityIndicator />
     ) : error ? (
       <Fragment>
-        <Footer.Button onPress={onPress} style={{marginVertical: 10}}>
-          <Footer.ButtonText>Retry</Footer.ButtonText>
-        </Footer.Button>
+        <RectangleButton
+          onPress={onPress}
+          title="Retry"
+          style={{ marginVertical: 10 }}
+        />
         <Footer.Error>{error.message}</Footer.Error>
       </Fragment>
     ) : hasMore ? (
-      <Footer.Button onPress={onPress}>
-        <Footer.ButtonText>Load More</Footer.ButtonText>
-      </Footer.Button>
+      <RectangleButton onPress={onPress} title="Load More" />
     ) : (
       <Footer.Error>All loaded</Footer.Error>
     )}
   </Footer.Container>
 );
-
-Footer.Button = styled.TouchableOpacity`
-  height: 50px;
-  border-radius: 12px;
-  margin: 0 20px;
-  justify-content: center;
-  align-items: center;
-  align-self: stretch;
-  background-color: #f0f0f7;
-`;
-
-Footer.ButtonText = styled.Text`
-  font-size: 18px;
-  font-weight: 600;
-  color: #157afb;
-`;
 
 Footer.Container = styled.View`
   min-height: 80px;
@@ -140,7 +126,7 @@ Footer.Error = styled.Text`
   text-align: center;
 `;
 
-const StarredPage = ({ user, updateUser }) => (
+const StarredPage = ({ user, updateUser, updateStarred }) => (
   <Stateful>
     {({ state, setState }) => (
       <Container>
@@ -157,7 +143,16 @@ const StarredPage = ({ user, updateUser }) => (
                 return <ActivityIndicator />;
               }
               if (error) {
-                return <ErrorView>{error.message}</ErrorView>;
+                return (
+                  <Fragment>
+                    <ErrorView>{error.message}</ErrorView>;
+                    <RectangleButton
+                      onPress={onPress}
+                      title="Retry"
+                      style={{ marginTop: 20 }}
+                    />
+                  </Fragment>
+                );
               }
               const nodes = data.viewer.starredRepositories.nodes;
               const edges = data.viewer.starredRepositories.edges;
@@ -170,7 +165,9 @@ const StarredPage = ({ user, updateUser }) => (
                   data={dataSource}
                   ListFooterComponent={() => (
                     <Footer
-                      hasMore={data.viewer.starredRepositories.pageInfo.hasNextPage}
+                      hasMore={
+                        data.viewer.starredRepositories.pageInfo.hasNextPage
+                      }
                       loading={state.loadingMore}
                       error={state.loadingMoreError}
                       onPress={async () => {
@@ -178,21 +175,36 @@ const StarredPage = ({ user, updateUser }) => (
                         try {
                           await fetchMore({
                             variables: {
-                              after: data.viewer.starredRepositories.pageInfo.endCursor
+                              after:
+                                data.viewer.starredRepositories.pageInfo
+                                  .endCursor
                             },
                             updateQuery: (prev, { fetchMoreResult }) => {
                               if (!fetchMoreResult) {
                                 return prev;
                               }
                               const preRepos = prev.viewer.starredRepositories;
-                              const nextRepos = fetchMoreResult.viewer.starredRepositories;
+                              const nextRepos =
+                                fetchMoreResult.viewer.starredRepositories;
+                              if (
+                                preRepos.pageInfo.endCursor ===
+                                nextRepos.pageInfo.endCursor
+                              ) {
+                                return prev;
+                              }
                               return {
                                 viewer: {
                                   ...prev.viewer,
                                   starredRepositories: {
                                     ...preRepos,
-                                    edges: [...preRepos.edges, ...nextRepos.edges],
-                                    nodes: [...preRepos.nodes, ...nextRepos.nodes]
+                                    edges: [
+                                      ...preRepos.edges,
+                                      ...nextRepos.edges
+                                    ],
+                                    nodes: [
+                                      ...preRepos.nodes,
+                                      ...nextRepos.nodes
+                                    ]
                                   }
                                 }
                               };

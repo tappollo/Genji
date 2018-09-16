@@ -1,9 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { ActivityIndicator } from "react-native";
 
-const RoundButton = ({ title, selected, onPress }) => (
+const RoundButton = ({ title, selected, onPress, loading }) => (
   <RoundButton.Container selected={selected} onPress={onPress}>
-    <RoundButton.Text selected={selected}>{title}</RoundButton.Text>
+    {loading ? (
+      <ActivityIndicator />
+    ) : (
+      <RoundButton.Text selected={selected}>{title}</RoundButton.Text>
+    )}
   </RoundButton.Container>
 );
 

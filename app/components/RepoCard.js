@@ -84,6 +84,7 @@ const RepoCard = ({
   forks,
   avatars,
   activity,
+  starred,
   onPress,
   compact
 }) => (
@@ -137,7 +138,7 @@ const RepoCard = ({
               <Avatar key={url} source={{ uri: url }} />
             ))}
             <View style={{ flex: 1 }} />
-            <StarButton />
+            <StarButton defaultValue={starred} repo={repo}/>
           </InfoRow>
         </Container>
       </TouchableWithoutFeedback>

@@ -19,7 +19,18 @@ const featured = (state = featuredLanguages, {type, payload}) => {
   return state;
 };
 
+const starred = (state = {}, {type, payload}) => {
+  if (type === 'TOGGLE_STARRED') {
+    return {
+      ...state,
+      [payload]: !state[payload]
+    }
+  }
+  return state;
+};
+
 export default combineReducers({
   user,
   featured,
+  starred,
 });
