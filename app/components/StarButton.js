@@ -1,8 +1,9 @@
 import React from "react";
 import RoundButton from "./RoundButton";
-import { connect } from "react-redux";
+import {  connect } from "react-redux";
 import Stateful from "../functionComponents/Stateful";
 import {star} from "../network/githubAPI";
+import {withNavigation} from 'react-navigation';
 
 const StarButton = ({ starred, defaultValue, toggle, repo, auth }) => {
   const starOn = starred[repo] === undefined ? defaultValue : starred[repo];
