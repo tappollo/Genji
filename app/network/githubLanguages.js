@@ -1,7 +1,11 @@
 import {languages, featured, allLanguages} from './languages.json';
 
 export const getLanguageName = (language) => {
-  return languages[language]?.name;
+  return getLanguageDetail(language)?.name
+};
+
+export const getLanguageDetail = (language) => {
+  return languages[language];
 };
 
 export const featuredLanguages = featured;

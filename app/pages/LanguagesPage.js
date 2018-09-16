@@ -1,9 +1,9 @@
 import styled from "styled-components";
-import {getStatusBarHeight} from "react-native-iphone-x-helper";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import React from "react";
 import LanguageSection from "../components/LanguageSection";
-import {FlatList} from "react-native";
-import {featuredLanguages} from "../network/githubLanguages";
+import { FlatList } from "react-native";
+import { featuredLanguages } from "../network/githubLanguages";
 
 const Container = styled.View`
   padding-top: ${getStatusBarHeight(true)};
@@ -57,7 +57,10 @@ const LanguagesPage = ({ navigation }) => (
     <FlatList
       ListHeaderComponent={() => <Header>Featured</Header>}
       ListFooterComponent={() => (
-        <Footer onPress={() => alert("test")} title="Show all languages" />
+        <Footer
+          onPress={() => navigation.navigate("AllLanguages")}
+          title="Show all languages"
+        />
       )}
       renderItem={({ item }) => (
         <LanguageSection
