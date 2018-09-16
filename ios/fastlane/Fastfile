@@ -3,6 +3,9 @@ default_platform(:ios)
 platform :ios do
   desc "Description of what the lane does"
   lane :beta do
-      build_app(scheme: "Genji")
+      build_app(
+          scheme: "Genji"
+          export_method: "development"
+      )
   end
 end

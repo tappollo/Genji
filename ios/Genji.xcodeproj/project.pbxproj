@@ -1937,6 +1937,7 @@
 			baseConfigurationReference = 8D629FA55F4746FDBDD0794E /* Pods-Genji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -1966,8 +1967,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.matrix.genji;
 				PRODUCT_NAME = Genji;
-				PROVISIONING_PROFILE = "661042bb-8043-4875-8f02-4b2d97aef1cc";
-				PROVISIONING_PROFILE_SPECIFIER = "match Development com.matrix.genji";
+				PROVISIONING_PROFILE = "f543148e-698f-4c26-b463-8a518b575f9d";
+				PROVISIONING_PROFILE_SPECIFIER = "match AppStore com.matrix.genji";
 				VERSIONING_SYSTEM = "apple-generic";
 			};
 			name = Release;
