@@ -145,9 +145,13 @@ const RepoDetailPage = ({ navigation }) => (
           }}
         >
           <TopSpacer onPress={() => {
-            Share.open({
-              url: `https://github.com/${navigation.getParam("repo").repo}`
-            })
+            try {
+              Share.open({
+                url: `https://github.com/${navigation.getParam("repo").repo}`
+              })
+            } catch (e) {
+
+            }
           }}/>
           <RepoCard {...navigation.getParam("repo")} />
           <Onmount>
