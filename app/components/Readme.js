@@ -43,7 +43,7 @@ ${html}
 </html>
 `;
 
-const Readme = ({ repo, onReady, style }) => (
+const Readme = ({ url, onReady, style }) => (
   <AutoHeightWebView
     style={style}
     enableAnimation={false}
@@ -51,17 +51,17 @@ const Readme = ({ repo, onReady, style }) => (
       onReady();
     }}
     onMessage={async event => {
-      const url = event?.nativeEvent?.data;
-      if (!url) {
+      const urlFromWebView = event?.nativeEvent?.data;
+      if (!urlFromWebView) {
         return;
       }
       if (await SafariView.isAvailable()) {
-        SafariView.show({ url });
+        SafariView.show({ url: urlFromWebView });
       } else {
-        Linking.openURL(url);
+        Linking.openURL(urlFromWebView);
       }
     }}
-    source={{ url: `https://github.com/${repo}/blob/master/README.md` }}
+    source={{ url }}
     customScript={`
     var elements = document.getElementsByTagName('a');
     for(var i = 0, len = elements.length; i < len; i++) {

@@ -167,18 +167,20 @@ const RepoDetailPage = ({ navigation }) => (
           <Onmount>
             {async () => {
               setState({
-                content: await getReadmeContent(
+                readmeURL: await getReadmeContent(
                   navigation.getParam("repo").repo
                 )
               });
             }}
           </Onmount>
           {!state.ready && <Loading />}
-          <Readme
-            style={{opacity: state.ready ? 1 : 0, width: state.width}}
-            onReady={() => { !state.ready && setState({ ready: true }); }}
-            repo={ navigation.getParam("repo").repo }
-          />
+          {state.readmeURL && (
+            <Readme
+              style={{opacity: state.ready ? 1 : 0, width: state.width}}
+              onReady={() => { !state.ready && setState({ ready: true }); }}
+              url={ state.readmeURL }
+            />
+          )}
           <BottomSpacer />
         </ScrollView>
         <BackButton onPress={() => navigation.pop()}/>
