@@ -9,6 +9,8 @@ import {ActivityIndicator, Animated, ScrollView} from "react-native";
 import {BlurView} from "react-native-blur";
 import StarButton from "../components/StarButton";
 import {BackButton} from "../components/BackButton";
+import Ionicons from "react-native-vector-icons/Ionicons";
+import Share from 'react-native-share';
 
 const Container = styled.View`
   flex: 1;
@@ -92,8 +94,26 @@ const BlurBackground = styled(BlurView).attrs({
   right: 0;
 `;
 
-const TopSpacer = styled.View`
+const TopSpacer = ({onPress}) => (
+  <TopSpacer.Container onPress={onPress}>
+    <TopSpacer.Icon/>
+  </TopSpacer.Container>
+);
+
+TopSpacer.Container = styled.TouchableOpacity`
   height: 44px;
+  width: 44px;
+  align-self: flex-end;
+  align-items: center;
+  justify-content: center;
+  margin-right: 20px;
+`;
+
+TopSpacer.Icon = styled(Ionicons).attrs({
+  name: 'ios-share',
+  size: 30
+})`
+  color: #0366d6;
 `;
 
 const BottomSpacer = styled.View`
@@ -124,11 +144,10 @@ const RepoDetailPage = ({ navigation }) => (
             object.previousOffset = newOffset;
           }}
         >
-          <TopSpacer onLayout={e => {
-            const width = e?.nativeEvent?.layout?.width;
-            if (width && width !== state.width) {
-              setState({width})
-            }
+          <TopSpacer onPress={() => {
+            Share.open({
+              url: `https://github.com/${navigation.getParam("repo").repo}`
+            })
           }}/>
           <RepoCard {...navigation.getParam("repo")} />
           <Onmount>
