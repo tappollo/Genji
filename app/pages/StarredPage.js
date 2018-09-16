@@ -6,6 +6,7 @@ import LoginView from "../components/LoginView";
 import gql from "graphql-tag";
 import { ActivityIndicator, FlatList } from "react-native";
 import { Query } from "react-apollo";
+import {Alert} from 'react-native';
 import RepoCard from "../components/RepoCard";
 import dayjs from "dayjs";
 import relativeTime from "dayjs/plugin/relativeTime";
@@ -97,13 +98,13 @@ const Cell = ({
   return <RepoCard {...item} onPress={() => onSelect(item)} />;
 };
 
-const Header = ({ title, subtitle }) => (
+const Header = ({ title, subtitle, onPress }) => (
   <Header.Container>
     <Header.Texts>
       <Header.Title>{title}</Header.Title>
       <Header.Subtitle>{subtitle}</Header.Subtitle>
     </Header.Texts>
-    <RoundButton title="Log out" />
+    <RoundButton title="Log out" onPress={onPress}/>
   </Header.Container>
 );
 
@@ -208,6 +209,12 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
                       subtitle={`${
                         data.viewer.starredRepositories.totalCount
                       } repos starred`}
+                      onPress={() => {
+                        Alert.alert("Are you sure", null, [
+                          {text: 'Cancel', style: 'cancel'},
+                          {text: 'Logout', onPress: () => updateUser(null), style: 'destructive'}
+                        ]);
+                      }}
                     />
                   )}
                   ListFooterComponent={() => (
@@ -290,6 +297,6 @@ export default connect(
   }),
   dispatch => ({
     updateUser: token => dispatch({ type: "UPDATE_USER", payload: token }),
-    updateStarred: payload => dispatch({ type: "UPDATE_FROM_GRAPHQL", payload })
+    updateStarred: payload => dispatch({ type: "UPDATE_FROM_GRAPHQL", payload }),
   })
 )(StarredPage);
