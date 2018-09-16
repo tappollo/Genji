@@ -1,75 +1,227 @@
 import styled from "styled-components";
-import React from "react";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import React, {Fragment} from "react";
 import githubOauth from "../network/githubOauth";
 import { connect } from "react-redux";
+import LoginView from "../components/LoginView";
+import gql from "graphql-tag";
+import { ActivityIndicator, FlatList } from "react-native";
+import { Query } from "react-apollo";
+import RepoCard from "../components/RepoCard";
+import dayjs from "dayjs";
+import relativeTime from "dayjs/plugin/relativeTime";
+import { getStatusBarHeight } from "react-native-iphone-x-helper";
+import Stateful from "../functionComponents/Stateful";
+
+dayjs.extend(relativeTime);
 
 const Container = styled.View`
   flex: 1;
   background-color: white;
+  justify-content: center;
+  padding-top: ${getStatusBarHeight(true)};
 `;
 
-const LoginView = ({ onPress }) => (
-  <LoginView.Container>
-    <LoginView.Intro>To see your stars</LoginView.Intro>
-    <LoginView.Button onPress={onPress}>
-      <LoginView.Icon />
-      <LoginView.Text>Sign in with Github</LoginView.Text>
-    </LoginView.Button>
-  </LoginView.Container>
+const STARRED_QUERY = gql`
+  query Starred($after: String) {
+    viewer {
+      starredRepositories(
+        first: 20
+        after: $after
+        orderBy: { field: STARRED_AT, direction: DESC }
+      ) {
+        totalCount
+        pageInfo {
+          endCursor
+          hasNextPage
+        }
+        edges {
+          starredAt
+        }
+        nodes {
+          nameWithOwner
+          description
+          stargazers {
+            totalCount
+          }
+          forks {
+            totalCount
+          }
+          mentionableUsers(first: 5) {
+            nodes {
+              avatarUrl
+            }
+          }
+          primaryLanguage {
+            name
+            color
+          }
+        }
+      }
+    }
+  }
+`;
+
+const ErrorView = styled.Text`
+  color: lightgray;
+  align-items: center;
+  margin: 0 20px;
+  text-align: center;
+`;
+
+const Cell = ({
+  nameWithOwner,
+  starredAt,
+  description,
+  stargazers,
+  forks,
+  mentionableUsers,
+  primaryLanguage
+}) => (
+  <RepoCard
+    repo={nameWithOwner}
+    activity={`starred ${dayjs(starredAt).fromNow()}`}
+    desc={description}
+    stars={stargazers.totalCount}
+    forks={forks.totalCount}
+    avatars={mentionableUsers.nodes.map(a => a.avatarUrl)}
+    lang={primaryLanguage?.name || "Unknown"}
+    color={primaryLanguage?.color || "gray"}
+  />
 );
 
-LoginView.Container = styled.View`
-  flex: 1;
-  justify-content: center;
-`;
+const Footer = ({ error, loading, hasMore, onPress }) => (
+  <Footer.Container>
+    {loading ? (
+      <ActivityIndicator />
+    ) : error ? (
+      <Fragment>
+        <Footer.Button onPress={onPress} style={{marginVertical: 10}}>
+          <Footer.ButtonText>Retry</Footer.ButtonText>
+        </Footer.Button>
+        <Footer.Error>{error.message}</Footer.Error>
+      </Fragment>
+    ) : hasMore ? (
+      <Footer.Button onPress={onPress}>
+        <Footer.ButtonText>Load More</Footer.ButtonText>
+      </Footer.Button>
+    ) : (
+      <Footer.Error>All loaded</Footer.Error>
+    )}
+  </Footer.Container>
+);
 
-LoginView.Button = styled.TouchableOpacity`
+Footer.Button = styled.TouchableOpacity`
   height: 50px;
-  margin: 0 20px;
   border-radius: 12px;
-  background-color: #2ebc4f;
-  flex-direction: row;
-  align-items: center;
+  margin: 0 20px;
   justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  background-color: #f0f0f7;
 `;
 
-LoginView.Icon = styled(Ionicons).attrs({
-  name: "logo-github",
-  size: 28
-})`
-  color: white;
-  margin-right: 10px;
-`;
-
-LoginView.Intro = styled.Text`
-  align-self: center;
-  color: lightgray;
-  font-size: 14px;
-  margin-bottom: 20px;
-`;
-
-LoginView.Text = styled.Text`
-  color: white;
-  font-size: 16px;
+Footer.ButtonText = styled.Text`
+  font-size: 18px;
   font-weight: 600;
+  color: #157afb;
 `;
 
-const C = styled.Text``;
+Footer.Container = styled.View`
+  min-height: 80px;
+  padding: 0 10px;
+  justify-content: center;
+  align-items: center;
+`;
+
+Footer.Error = styled.Text`
+  color: lightgray;
+  font-size: 12px;
+  margin: 0 20px;
+  text-align: center;
+`;
 
 const StarredPage = ({ user, updateUser }) => (
-  <Container>
-    {user ? (
-      <C>{user}</C>
-    ) : (
-      <LoginView
-        onPress={async () => {
-          const { access_token } = await githubOauth.start();
-          updateUser(access_token);
-        }}
-      />
+  <Stateful>
+    {({ state, setState }) => (
+      <Container>
+        {user ? (
+          <Query
+            query={STARRED_QUERY}
+            variables={{
+              after: null
+            }}
+            fetchPolicy="cache-and-network"
+          >
+            {({ loading, error, data, fetchMore }) => {
+              if (loading && !Boolean(Object.keys(data)[0])) {
+                return <ActivityIndicator />;
+              }
+              if (error) {
+                return <ErrorView>{error.message}</ErrorView>;
+              }
+              const nodes = data.viewer.starredRepositories.nodes;
+              const edges = data.viewer.starredRepositories.edges;
+              const dataSource = nodes.map((node, index) => ({
+                ...node,
+                ...edges[index]
+              }));
+              return (
+                <FlatList
+                  data={dataSource}
+                  ListFooterComponent={() => (
+                    <Footer
+                      hasMore={data.viewer.starredRepositories.pageInfo.hasNextPage}
+                      loading={state.loadingMore}
+                      error={state.loadingMoreError}
+                      onPress={async () => {
+                        setState({ loadingMore: true, loadingMoreError: null });
+                        try {
+                          await fetchMore({
+                            variables: {
+                              after: data.viewer.starredRepositories.pageInfo.endCursor
+                            },
+                            updateQuery: (prev, { fetchMoreResult }) => {
+                              if (!fetchMoreResult) {
+                                return prev;
+                              }
+                              const preRepos = prev.viewer.starredRepositories;
+                              const nextRepos = fetchMoreResult.viewer.starredRepositories;
+                              return {
+                                viewer: {
+                                  ...prev.viewer,
+                                  starredRepositories: {
+                                    ...preRepos,
+                                    edges: [...preRepos.edges, ...nextRepos.edges],
+                                    nodes: [...preRepos.nodes, ...nextRepos.nodes]
+                                  }
+                                }
+                              };
+                            }
+                          });
+                          setState({ loadingMore: false });
+                        } catch (e) {
+                          setState({ loadingMore: false, loadingMoreError: e });
+                        }
+                      }}
+                    />
+                  )}
+                  keyExtractor={value => value.nameWithOwner}
+                  renderItem={({ item }) => <Cell {...item} />}
+                />
+              );
+            }}
+          </Query>
+        ) : (
+          <LoginView
+            onPress={async () => {
+              const { access_token } = await githubOauth.start();
+              updateUser(access_token);
+            }}
+          />
+        )}
+      </Container>
     )}
-  </Container>
+  </Stateful>
 );
 
 StarredPage.navigationOptions = {
