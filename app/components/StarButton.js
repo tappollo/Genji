@@ -2,10 +2,10 @@ import React from "react";
 import RoundButton from "./RoundButton";
 import {  connect } from "react-redux";
 import Stateful from "../functionComponents/Stateful";
-import {star} from "../network/githubAPI";
-import {withNavigation} from 'react-navigation';
+import {star, unstar} from "../network/githubAPI";
+import githubOauth from "../network/githubOauth";
 
-const StarButton = ({ starred, defaultValue, toggle, repo, auth }) => {
+const StarButton = ({ starred, defaultValue, toggle, repo, auth, updateUser }) => {
   const starOn = starred[repo] === undefined ? defaultValue : starred[repo];
   return (
     <Stateful>{({state, setState}) => (
@@ -15,11 +15,17 @@ const StarButton = ({ starred, defaultValue, toggle, repo, auth }) => {
         selected={starOn}
         onPress={async () => {
           try {
+            let token = auth;
+            if (!token) {
+              const {access_token} = await githubOauth.start();
+              updateUser(access_token);
+              token = access_token;
+            }
             setState({loading: true});
             if (starOn) {
-              await unstar({repo, auth})
+              await unstar({repo, token})
             } else {
-              await star({repo, auth});
+              await star({repo, token});
             }
             toggle(repo)
           } finally {
@@ -37,6 +43,7 @@ export default connect(
     auth: state.user,
   }),
   dispatch => ({
+    updateUser: token => dispatch({type: "UPDATE_USER", payload: token}),
     toggle: repo => dispatch({ type: "TOGGLE_STARRED", payload: repo })
   })
 )(StarButton);

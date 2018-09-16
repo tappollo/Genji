@@ -8,11 +8,11 @@ export const getReadmeContent = async (repo) => {
   }
 };
 
-export const star = async ({repo, auth}) => {
+export const star = async ({repo, token}) => {
   const response = await fetch(`https://api.github.com/user/starred/${repo}`, {
     method: 'PUT',
     headers: {
-      'Authorization': `bearer ${auth}`
+      'Authorization': `bearer ${token}`
     }
   });
   if (!response.ok) {
@@ -20,11 +20,11 @@ export const star = async ({repo, auth}) => {
   }
 };
 
-export const unstar = async ({repo, auth}) => {
+export const unstar = async ({repo, token}) => {
   const response = await fetch(`https://api.github.com/user/starred/${repo}`, {
     method: 'DELETE',
     headers: {
-      'Authorization': `bearer ${auth}`
+      'Authorization': `bearer ${token}`
     }
   });
   if (!response.ok) {
