@@ -1,21 +1,23 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 import React from "react";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import githubOauth from "../network/githubOauth";
+import { connect } from "react-redux";
 
 const Container = styled.View`
   flex: 1;
   background-color: white;
 `;
 
-const LoginView = ({onPress}) => (
+const LoginView = ({ onPress }) => (
   <LoginView.Container>
     <LoginView.Intro>To see your stars</LoginView.Intro>
-    <LoginView.Button>
-      <LoginView.Icon/>
+    <LoginView.Button onPress={onPress}>
+      <LoginView.Icon />
       <LoginView.Text>Sign in with Github</LoginView.Text>
     </LoginView.Button>
   </LoginView.Container>
-)
+);
 
 LoginView.Container = styled.View`
   flex: 1;
@@ -33,8 +35,8 @@ LoginView.Button = styled.TouchableOpacity`
 `;
 
 LoginView.Icon = styled(Ionicons).attrs({
-  name: 'logo-github',
-  size: 28,
+  name: "logo-github",
+  size: 28
 })`
   color: white;
   margin-right: 10px;
@@ -53,14 +55,32 @@ LoginView.Text = styled.Text`
   font-weight: 600;
 `;
 
-const StarredPage = () => (
+const C = styled.Text``;
+
+const StarredPage = ({ user, updateUser }) => (
   <Container>
-    <LoginView />
+    {user ? (
+      <C>{user}</C>
+    ) : (
+      <LoginView
+        onPress={async () => {
+          const { access_token } = await githubOauth.start();
+          updateUser(access_token);
+        }}
+      />
+    )}
   </Container>
 );
 
 StarredPage.navigationOptions = {
-  title: 'Star'
+  title: "Star"
 };
 
-export default StarredPage;
+export default connect(
+  state => ({
+    user: state.user
+  }),
+  dispatch => ({
+    updateUser: token => dispatch({ type: "UPDATE_USER", payload: token })
+  })
+)(StarredPage);
