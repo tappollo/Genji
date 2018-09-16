@@ -44,5 +44,5 @@ const getPopularRepos = async () => {
 
 (async () => {
   const result = await getPopularRepos();
-  fs.writeFileSync('./languages.json', JSON.stringify(result, null, 2))
+  fs.writeFileSync('../app/network/languages.json', JSON.stringify(result, null, 2))
 })();

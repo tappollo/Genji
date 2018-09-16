@@ -17,8 +17,8 @@ const Icons = focused => ({
 
 const Tabs = createBottomTabNavigator(
   {
-    TodayPage,
     LanguagesPage,
+    TodayPage,
     StarredPage
   },
   {

@@ -29,6 +29,24 @@ class Stateful extends Component {
   }
 }
 
+export class OnMountAndUnMount extends Component {
+  componentDidMount() {
+    this.props.children({
+      mount: true,
+      object: this,
+    });
+  }
+  componentWillUnmount() {
+    this.props.children({
+      mount: false,
+      object: this,
+    });
+  }
+  render() {
+    return null;
+  }
+}
+
 export class Onmount extends Component {
   componentDidMount() {
     this.props.children({

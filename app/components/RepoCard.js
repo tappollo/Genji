@@ -1,16 +1,28 @@
 import React from "react";
-import { View, Animated, TouchableWithoutFeedback } from "react-native";
-import styled from "styled-components";
+import { View, Animated, TouchableWithoutFeedback, Dimensions } from "react-native";
+import styled, {css} from "styled-components";
 import Ionicons from "react-native-vector-icons/Ionicons";
 import FastImage from "react-native-fast-image";
 import Stateful from "../functionComponents/Stateful";
 import StarButton from "./StarButton";
 
-const Container = styled(Animated.View)`
+const fullStyle = css`
+  box-shadow: 0 12px 14px rgba(0, 0, 0, 0.1);
   margin: 10px 20px;
+`;
+
+const screenWidth = Dimensions.get('window').width;
+
+const compactStyle = css`
+  margin: 15px 0 20px 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: ${screenWidth * 0.85};
+`;
+
+const Container = styled(Animated.View)`
   padding: 15px;
   border-radius: 15px;
-  box-shadow: 0 12px 14px rgba(0, 0, 0, 0.1);
+  ${({compact}) => compact ? compactStyle : fullStyle};
   background-color: white;
 `;
 
@@ -63,7 +75,6 @@ const Avatar = styled(FastImage)`
   margin-right: 3px;
 `;
 
-
 const RepoCard = ({
   repo,
   desc,
@@ -73,7 +84,8 @@ const RepoCard = ({
   forks,
   avatars,
   activity,
-  onPress
+  onPress,
+  compact
 }) => (
   <Stateful state={{ zoom: new Animated.Value(0) }}>
     {({ state, setState }) => (
@@ -91,6 +103,7 @@ const RepoCard = ({
         }}
       >
         <Container
+          compact={compact}
           style={{
             transform: [
               {
@@ -102,11 +115,12 @@ const RepoCard = ({
             ]
           }}
         >
-          <Repo>
+          <Repo numberOfLines={compact ? 1 : 0}>
             <Repo>{repo.split("/")[0]} / </Repo>
             <Repo bold>{repo.split("/")[1]}</Repo>
           </Repo>
-          <Desc>{desc}</Desc>
+          <Desc numberOfLines={compact ? 2 : 0}>{desc}</Desc>
+          <View style={{flex: 1}}/>
           <InfoRow>
             <Dot color={color} />
             <InfoText>{lang}</InfoText>
