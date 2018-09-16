@@ -12,6 +12,7 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import { getStatusBarHeight } from "react-native-iphone-x-helper";
 import Stateful from "../functionComponents/Stateful";
 import RectangleButton from "../components/RectangleButton";
+import RoundButton from "../components/RoundButton";
 
 dayjs.extend(relativeTime);
 
@@ -25,8 +26,9 @@ const Container = styled.View`
 const STARRED_QUERY = gql`
   query Starred($after: String) {
     viewer {
+      name
       starredRepositories(
-        first: 20
+        first: 10
         after: $after
         orderBy: { field: STARRED_AT, direction: DESC }
       ) {
@@ -37,24 +39,24 @@ const STARRED_QUERY = gql`
         }
         edges {
           starredAt
-        }
-        nodes {
-          nameWithOwner
-          description
-          stargazers {
-            totalCount
-          }
-          forks {
-            totalCount
-          }
-          mentionableUsers(first: 5) {
-            nodes {
-              avatarUrl
+          node {
+            nameWithOwner
+            description
+            stargazers {
+              totalCount
             }
-          }
-          primaryLanguage {
-            name
-            color
+            forks {
+              totalCount
+            }
+            mentionableUsers(first: 5) {
+              nodes {
+                avatarUrl
+              }
+            }
+            primaryLanguage {
+              name
+              color
+            }
           }
         }
       }
@@ -70,13 +72,15 @@ const ErrorView = styled.Text`
 `;
 
 const Cell = ({
-  nameWithOwner,
+  node: {
+    nameWithOwner,
+    description,
+    stargazers,
+    forks,
+    mentionableUsers,
+    primaryLanguage
+  },
   starredAt,
-  description,
-  stargazers,
-  forks,
-  mentionableUsers,
-  primaryLanguage,
   onSelect
 }) => {
   const item = {
@@ -92,6 +96,39 @@ const Cell = ({
   };
   return <RepoCard {...item} onPress={() => onSelect(item)} />;
 };
+
+const Header = ({ title, subtitle }) => (
+  <Header.Container>
+    <Header.Texts>
+      <Header.Title>{title}</Header.Title>
+      <Header.Subtitle>{subtitle}</Header.Subtitle>
+    </Header.Texts>
+    <RoundButton title="Log out" />
+  </Header.Container>
+);
+
+Header.Container = styled.View`
+  padding: 26px 20px 5px;
+  flex-direction: row;
+  align-items: center;
+`;
+
+Header.Texts = styled.View`
+  flex: 1;
+`;
+
+Header.Title = styled.Text`
+  font-weight: bold;
+  font-size: 34px;
+  line-height: 41px;
+  color: black;
+`;
+
+Header.Subtitle = styled.Text`
+  font-weight: 600;
+  color: #8e8e93;
+  font-size: 12px;
+`;
 
 const Footer = ({ error, loading, hasMore, onPress }) => (
   <Footer.Container>
@@ -136,7 +173,9 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
           <Query
             query={STARRED_QUERY}
             onCompleted={data => {
-              const entries = data.viewer.starredRepositories.nodes.map(a => a.nameWithOwner)
+              const entries = data.viewer.starredRepositories.edges.map(
+                a => a.node.nameWithOwner
+              );
               updateStarred(entries);
             }}
             variables={{
@@ -160,15 +199,17 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
                   </Fragment>
                 );
               }
-              const nodes = data.viewer.starredRepositories.nodes;
-              const edges = data.viewer.starredRepositories.edges;
-              const dataSource = nodes.map((node, index) => ({
-                ...node,
-                ...edges[index]
-              }));
               return (
                 <FlatList
-                  data={dataSource}
+                  data={data.viewer.starredRepositories.edges}
+                  ListHeaderComponent={() => (
+                    <Header
+                      title={data.viewer.name}
+                      subtitle={`${
+                        data.viewer.starredRepositories.totalCount
+                      } repos starred`}
+                    />
+                  )}
                   ListFooterComponent={() => (
                     <Footer
                       hasMore={
@@ -192,24 +233,14 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
                               const preRepos = prev.viewer.starredRepositories;
                               const nextRepos =
                                 fetchMoreResult.viewer.starredRepositories;
-                              if (
-                                preRepos.pageInfo.endCursor ===
-                                nextRepos.pageInfo.endCursor
-                              ) {
-                                return prev;
-                              }
                               return {
                                 viewer: {
-                                  ...prev.viewer,
+                                  ...fetchMoreResult.viewer,
                                   starredRepositories: {
-                                    ...preRepos,
+                                    ...nextRepos,
                                     edges: [
                                       ...preRepos.edges,
                                       ...nextRepos.edges
-                                    ],
-                                    nodes: [
-                                      ...preRepos.nodes,
-                                      ...nextRepos.nodes
                                     ]
                                   }
                                 }
@@ -223,12 +254,12 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
                       }}
                     />
                   )}
-                  keyExtractor={value => value.nameWithOwner}
+                  keyExtractor={value => value.node.nameWithOwner}
                   renderItem={({ item }) => (
                     <Cell
                       {...item}
-                      onSelect={item =>
-                        navigation.navigate("RepoDetailPage", { repo: item })
+                      onSelect={repo =>
+                        navigation.navigate("RepoDetailPage", { repo })
                       }
                     />
                   )}
@@ -258,7 +289,7 @@ export default connect(
     user: state.user
   }),
   dispatch => ({
-    updateUser: token => dispatch({type: "UPDATE_USER", payload: token}),
-    updateStarred: payload => dispatch({type: 'UPDATE_FROM_GRAPHQL', payload})
+    updateUser: token => dispatch({ type: "UPDATE_USER", payload: token }),
+    updateStarred: payload => dispatch({ type: "UPDATE_FROM_GRAPHQL", payload })
   })
 )(StarredPage);
