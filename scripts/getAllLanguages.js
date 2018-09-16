@@ -15,33 +15,30 @@ const getPopularRepos = async () => {
   const featured = [];
   $('.filter-list li a.filter-item').each((index, item) => {
     const $item = $(item);
-    const name = $item.text().trim();
     const value = $item.attr('href').match(linkValueRegex)[1];
     if (["", "unknown"].includes(value)) {
       return;
     }
-    featured.push({
-      name,
-      color: colors[name] && colors[name].color || null,
-      value,
-    });
+    featured.push(value);
   });
 
   const allLanguages = [];
+  const languages = {};
   $('.col-md-3 .select-menu-list a.js-navigation-item').each((index, item) => {
     const $item = $(item);
     const name = $item.text().trim();
     const value = $item.attr('href').match(linkValueRegex)[1];
-    allLanguages.push({
+    allLanguages.push(value);
+    languages[value] = {
       name,
       color: colors[name] && colors[name].color || null,
-      value,
-    });
+    };
   });
 
   return {
     featured,
     allLanguages,
+    languages,
   };
 };
 

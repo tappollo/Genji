@@ -1,2441 +1,2411 @@
 {
   "featured": [
-    {
-      "name": "C++",
-      "color": "#f34b7d",
-      "value": "c++"
-    },
-    {
-      "name": "HTML",
-      "color": "#e34c26",
-      "value": "html"
-    },
-    {
-      "name": "Java",
-      "color": "#b07219",
-      "value": "java"
-    },
-    {
-      "name": "JavaScript",
-      "color": "#f1e05a",
-      "value": "javascript"
-    },
-    {
-      "name": "PHP",
-      "color": "#4F5D95",
-      "value": "php"
-    },
-    {
-      "name": "Python",
-      "color": "#3572A5",
-      "value": "python"
-    },
-    {
-      "name": "Ruby",
-      "color": "#701516",
-      "value": "ruby"
-    }
+    "c++",
+    "html",
+    "java",
+    "javascript",
+    "php",
+    "python",
+    "ruby"
   ],
   "allLanguages": [
-    {
+    "1c-enterprise",
+    "abap",
+    "abnf",
+    "actionscript",
+    "ada",
+    "adobe-font-metrics",
+    "agda",
+    "ags-script",
+    "alloy",
+    "alpine-abuild",
+    "ampl",
+    "angelscript",
+    "ant-build-system",
+    "antlr",
+    "apacheconf",
+    "apex",
+    "api-blueprint",
+    "apl",
+    "apollo-guidance-computer",
+    "applescript",
+    "arc",
+    "asciidoc",
+    "asn.1",
+    "asp",
+    "aspectj",
+    "assembly",
+    "ats",
+    "augeas",
+    "autohotkey",
+    "autoit",
+    "awk",
+    "ballerina",
+    "batchfile",
+    "befunge",
+    "bison",
+    "bitbake",
+    "blade",
+    "blitzbasic",
+    "blitzmax",
+    "bluespec",
+    "boo",
+    "brainfuck",
+    "brightscript",
+    "bro",
+    "c",
+    "c%23",
+    "c++",
+    "c-objdump",
+    "c2hs-haskell",
+    "cap'n-proto",
+    "cartocss",
+    "ceylon",
+    "chapel",
+    "charity",
+    "chuck",
+    "cirru",
+    "clarion",
+    "clean",
+    "click",
+    "clips",
+    "clojure",
+    "closure-templates",
+    "cloud-firestore-security-rules",
+    "cmake",
+    "cobol",
+    "coffeescript",
+    "coldfusion",
+    "coldfusion-cfc",
+    "collada",
+    "common-lisp",
+    "common-workflow-language",
+    "component-pascal",
+    "conll-u",
+    "cool",
+    "coq",
+    "cpp-objdump",
+    "creole",
+    "crystal",
+    "cson",
+    "csound",
+    "csound-document",
+    "csound-score",
+    "css",
+    "csv",
+    "cuda",
+    "cweb",
+    "cycript",
+    "cython",
+    "d",
+    "d-objdump",
+    "darcs-patch",
+    "dart",
+    "dataweave",
+    "desktop",
+    "diff",
+    "digital-command-language",
+    "dm",
+    "dns-zone",
+    "dockerfile",
+    "dogescript",
+    "dtrace",
+    "dylan",
+    "e",
+    "eagle",
+    "easybuild",
+    "ebnf",
+    "ec",
+    "ecere-projects",
+    "ecl",
+    "eclipse",
+    "edje-data-collection",
+    "edn",
+    "eiffel",
+    "ejs",
+    "elixir",
+    "elm",
+    "emacs-lisp",
+    "emberscript",
+    "eq",
+    "erlang",
+    "f%23",
+    "factor",
+    "fancy",
+    "fantom",
+    "filebench-wml",
+    "filterscript",
+    "fish",
+    "flux",
+    "formatted",
+    "forth",
+    "fortran",
+    "freemarker",
+    "frege",
+    "g-code",
+    "game-maker-language",
+    "gams",
+    "gap",
+    "gcc-machine-description",
+    "gdb",
+    "gdscript",
+    "genie",
+    "genshi",
+    "gentoo-ebuild",
+    "gentoo-eclass",
+    "gerber-image",
+    "gettext-catalog",
+    "gherkin",
+    "glsl",
+    "glyph",
+    "gn",
+    "gnuplot",
+    "go",
+    "golo",
+    "gosu",
+    "grace",
+    "gradle",
+    "grammatical-framework",
+    "graph-modeling-language",
+    "graphql",
+    "graphviz-(dot)",
+    "groovy",
+    "groovy-server-pages",
+    "hack",
+    "haml",
+    "handlebars",
+    "harbour",
+    "haskell",
+    "haxe",
+    "hcl",
+    "hiveql",
+    "hlsl",
+    "html",
+    "html+django",
+    "html+ecr",
+    "html+eex",
+    "html+erb",
+    "html+php",
+    "http",
+    "hxml",
+    "hy",
+    "hyphy",
+    "idl",
+    "idris",
+    "igor-pro",
+    "inform-7",
+    "ini",
+    "inno-setup",
+    "io",
+    "ioke",
+    "irc-log",
+    "isabelle",
+    "isabelle-root",
+    "j",
+    "jasmin",
+    "java",
+    "java-server-pages",
+    "javascript",
+    "jflex",
+    "jison",
+    "jison-lex",
+    "jolie",
+    "json",
+    "json-with-comments",
+    "json5",
+    "jsoniq",
+    "jsonld",
+    "jsx",
+    "julia",
+    "jupyter-notebook",
+    "kicad-layout",
+    "kicad-legacy-layout",
+    "kicad-schematic",
+    "kit",
+    "kotlin",
+    "krl",
+    "labview",
+    "lasso",
+    "latte",
+    "lean",
+    "less",
+    "lex",
+    "lfe",
+    "lilypond",
+    "limbo",
+    "linker-script",
+    "linux-kernel-module",
+    "liquid",
+    "literate-agda",
+    "literate-coffeescript",
+    "literate-haskell",
+    "livescript",
+    "llvm",
+    "logos",
+    "logtalk",
+    "lolcode",
+    "lookml",
+    "loomscript",
+    "lsl",
+    "lua",
+    "m",
+    "m4",
+    "m4sugar",
+    "makefile",
+    "mako",
+    "markdown",
+    "marko",
+    "mask",
+    "mathematica",
+    "matlab",
+    "maven-pom",
+    "max",
+    "maxscript",
+    "mediawiki",
+    "mercury",
+    "meson",
+    "metal",
+    "minid",
+    "mirah",
+    "modelica",
+    "modula-2",
+    "modula-3",
+    "module-management-system",
+    "monkey",
+    "moocode",
+    "moonscript",
+    "mql4",
+    "mql5",
+    "mtml",
+    "muf",
+    "mupad",
+    "myghty",
+    "ncl",
+    "nearley",
+    "nemerle",
+    "nesc",
+    "netlinx",
+    "netlinx+erb",
+    "netlogo",
+    "newlisp",
+    "nextflow",
+    "nginx",
+    "nim",
+    "ninja",
+    "nit",
+    "nix",
+    "nl",
+    "nsis",
+    "nu",
+    "numpy",
+    "objdump",
+    "objective-c",
+    "objective-c++",
+    "objective-j",
+    "ocaml",
+    "omgrofl",
+    "ooc",
+    "opa",
+    "opal",
+    "opencl",
+    "openedge-abl",
+    "openrc-runscript",
+    "openscad",
+    "opentype-feature-file",
+    "org",
+    "ox",
+    "oxygene",
+    "oz",
+    "p4",
+    "pan",
+    "papyrus",
+    "parrot",
+    "parrot-assembly",
+    "parrot-internal-representation",
+    "pascal",
+    "pawn",
+    "pep8",
+    "perl",
+    "perl-6",
+    "php",
+    "pic",
+    "pickle",
+    "picolisp",
+    "piglatin",
+    "pike",
+    "plpgsql",
+    "plsql",
+    "pod",
+    "pogoscript",
+    "pony",
+    "postcss",
+    "postscript",
+    "pov-ray-sdl",
+    "powerbuilder",
+    "powershell",
+    "processing",
+    "prolog",
+    "propeller-spin",
+    "protocol-buffer",
+    "public-key",
+    "pug",
+    "puppet",
+    "pure-data",
+    "purebasic",
+    "purescript",
+    "python",
+    "python-console",
+    "python-traceback",
+    "q",
+    "qmake",
+    "qml",
+    "quake",
+    "r",
+    "racket",
+    "ragel",
+    "raml",
+    "rascal",
+    "raw-token-data",
+    "rdoc",
+    "realbasic",
+    "reason",
+    "rebol",
+    "red",
+    "redcode",
+    "regular-expression",
+    "ren'py",
+    "renderscript",
+    "restructuredtext",
+    "rexx",
+    "rhtml",
+    "ring",
+    "rmarkdown",
+    "robotframework",
+    "roff",
+    "rouge",
+    "rpc",
+    "rpm-spec",
+    "ruby",
+    "runoff",
+    "rust",
+    "sage",
+    "saltstack",
+    "sas",
+    "sass",
+    "scala",
+    "scaml",
+    "scheme",
+    "scilab",
+    "scss",
+    "sed",
+    "self",
+    "shaderlab",
+    "shell",
+    "shellsession",
+    "shen",
+    "slash",
+    "slim",
+    "smali",
+    "smalltalk",
+    "smarty",
+    "smt",
+    "solidity",
+    "sourcepawn",
+    "sparql",
+    "spline-font-database",
+    "sqf",
+    "sql",
+    "sqlpl",
+    "squirrel",
+    "srecode-template",
+    "stan",
+    "standard-ml",
+    "stata",
+    "ston",
+    "stylus",
+    "json-with-comments",
+    "subrip-text",
+    "sugarss",
+    "supercollider",
+    "svg",
+    "swift",
+    "systemverilog",
+    "tcl",
+    "tcsh",
+    "tea",
+    "terra",
+    "tex",
+    "text",
+    "textile",
+    "thrift",
+    "ti-program",
+    "tla",
+    "toml",
+    "turing",
+    "turtle",
+    "twig",
+    "txl",
+    "type-language",
+    "typescript",
+    "unified-parallel-c",
+    "unity3d-asset",
+    "unix-assembly",
+    "uno",
+    "unrealscript",
+    "urweb",
+    "vala",
+    "vcl",
+    "verilog",
+    "vhdl",
+    "vim-script",
+    "visual-basic",
+    "volt",
+    "vue",
+    "wavefront-material",
+    "wavefront-object",
+    "wdl",
+    "web-ontology-language",
+    "webassembly",
+    "webidl",
+    "wisp",
+    "world-of-warcraft-addon-data",
+    "x-bitmap",
+    "x-pixmap",
+    "x10",
+    "xbase",
+    "xc",
+    "xcompose",
+    "xml",
+    "xojo",
+    "xpages",
+    "xproc",
+    "xquery",
+    "xs",
+    "xslt",
+    "xtend",
+    "yacc",
+    "yaml",
+    "yang",
+    "yara",
+    "zephir",
+    "zimpl"
+  ],
+  "languages": {
+    "1c-enterprise": {
       "name": "1C Enterprise",
-      "color": "#814CCC",
-      "value": "1c-enterprise"
+      "color": "#814CCC"
     },
-    {
+    "abap": {
       "name": "ABAP",
-      "color": "#E8274B",
-      "value": "abap"
+      "color": "#E8274B"
     },
-    {
+    "abnf": {
       "name": "ABNF",
-      "color": null,
-      "value": "abnf"
+      "color": null
     },
-    {
+    "actionscript": {
       "name": "ActionScript",
-      "color": "#882B0F",
-      "value": "actionscript"
+      "color": "#882B0F"
     },
-    {
+    "ada": {
       "name": "Ada",
-      "color": "#02f88c",
-      "value": "ada"
+      "color": "#02f88c"
     },
-    {
+    "adobe-font-metrics": {
       "name": "Adobe Font Metrics",
-      "color": null,
-      "value": "adobe-font-metrics"
+      "color": null
     },
-    {
+    "agda": {
       "name": "Agda",
-      "color": "#315665",
-      "value": "agda"
+      "color": "#315665"
     },
-    {
+    "ags-script": {
       "name": "AGS Script",
-      "color": "#B9D9FF",
-      "value": "ags-script"
+      "color": "#B9D9FF"
     },
-    {
+    "alloy": {
       "name": "Alloy",
-      "color": "#64C800",
-      "value": "alloy"
+      "color": "#64C800"
     },
-    {
+    "alpine-abuild": {
       "name": "Alpine Abuild",
-      "color": null,
-      "value": "alpine-abuild"
+      "color": null
     },
-    {
+    "ampl": {
       "name": "AMPL",
-      "color": "#E6EFBB",
-      "value": "ampl"
+      "color": "#E6EFBB"
     },
-    {
+    "angelscript": {
       "name": "AngelScript",
-      "color": "#C7D7DC",
-      "value": "angelscript"
+      "color": "#C7D7DC"
     },
-    {
+    "ant-build-system": {
       "name": "Ant Build System",
-      "color": null,
-      "value": "ant-build-system"
+      "color": null
     },
-    {
+    "antlr": {
       "name": "ANTLR",
-      "color": "#9DC3FF",
-      "value": "antlr"
+      "color": "#9DC3FF"
     },
-    {
+    "apacheconf": {
       "name": "ApacheConf",
-      "color": null,
-      "value": "apacheconf"
+      "color": null
     },
-    {
+    "apex": {
       "name": "Apex",
-      "color": null,
-      "value": "apex"
+      "color": null
     },
-    {
+    "api-blueprint": {
       "name": "API Blueprint",
-      "color": "#2ACCA8",
-      "value": "api-blueprint"
+      "color": "#2ACCA8"
     },
-    {
+    "apl": {
       "name": "APL",
-      "color": "#5A8164",
-      "value": "apl"
+      "color": "#5A8164"
     },
-    {
+    "apollo-guidance-computer": {
       "name": "Apollo Guidance Computer",
-      "color": null,
-      "value": "apollo-guidance-computer"
+      "color": null
     },
-    {
+    "applescript": {
       "name": "AppleScript",
-      "color": "#101F1F",
-      "value": "applescript"
+      "color": "#101F1F"
     },
-    {
+    "arc": {
       "name": "Arc",
-      "color": "#aa2afe",
-      "value": "arc"
+      "color": "#aa2afe"
     },
-    {
+    "asciidoc": {
       "name": "AsciiDoc",
-      "color": null,
-      "value": "asciidoc"
+      "color": null
     },
-    {
+    "asn.1": {
       "name": "ASN.1",
-      "color": null,
-      "value": "asn.1"
+      "color": null
     },
-    {
+    "asp": {
       "name": "ASP",
-      "color": "#6a40fd",
-      "value": "asp"
+      "color": "#6a40fd"
     },
-    {
+    "aspectj": {
       "name": "AspectJ",
-      "color": "#a957b0",
-      "value": "aspectj"
+      "color": "#a957b0"
     },
-    {
+    "assembly": {
       "name": "Assembly",
-      "color": "#6E4C13",
-      "value": "assembly"
+      "color": "#6E4C13"
     },
-    {
+    "ats": {
       "name": "ATS",
-      "color": "#1ac620",
-      "value": "ats"
+      "color": "#1ac620"
     },
-    {
+    "augeas": {
       "name": "Augeas",
-      "color": null,
-      "value": "augeas"
+      "color": null
     },
-    {
+    "autohotkey": {
       "name": "AutoHotkey",
-      "color": "#6594b9",
-      "value": "autohotkey"
+      "color": "#6594b9"
     },
-    {
+    "autoit": {
       "name": "AutoIt",
-      "color": "#1C3552",
-      "value": "autoit"
+      "color": "#1C3552"
     },
-    {
+    "awk": {
       "name": "Awk",
-      "color": null,
-      "value": "awk"
+      "color": null
     },
-    {
+    "ballerina": {
       "name": "Ballerina",
-      "color": "#FF5000",
-      "value": "ballerina"
+      "color": "#FF5000"
     },
-    {
+    "batchfile": {
       "name": "Batchfile",
-      "color": "#C1F12E",
-      "value": "batchfile"
+      "color": "#C1F12E"
     },
-    {
+    "befunge": {
       "name": "Befunge",
-      "color": null,
-      "value": "befunge"
+      "color": null
     },
-    {
+    "bison": {
       "name": "Bison",
-      "color": null,
-      "value": "bison"
+      "color": null
     },
-    {
+    "bitbake": {
       "name": "BitBake",
-      "color": null,
-      "value": "bitbake"
+      "color": null
     },
-    {
+    "blade": {
       "name": "Blade",
-      "color": null,
-      "value": "blade"
+      "color": null
     },
-    {
+    "blitzbasic": {
       "name": "BlitzBasic",
-      "color": null,
-      "value": "blitzbasic"
+      "color": null
     },
-    {
+    "blitzmax": {
       "name": "BlitzMax",
-      "color": "#cd6400",
-      "value": "blitzmax"
+      "color": "#cd6400"
     },
-    {
+    "bluespec": {
       "name": "Bluespec",
-      "color": null,
-      "value": "bluespec"
+      "color": null
     },
-    {
+    "boo": {
       "name": "Boo",
-      "color": "#d4bec1",
-      "value": "boo"
+      "color": "#d4bec1"
     },
-    {
+    "brainfuck": {
       "name": "Brainfuck",
-      "color": "#2F2530",
-      "value": "brainfuck"
+      "color": "#2F2530"
     },
-    {
+    "brightscript": {
       "name": "Brightscript",
-      "color": null,
-      "value": "brightscript"
+      "color": null
     },
-    {
+    "bro": {
       "name": "Bro",
-      "color": null,
-      "value": "bro"
+      "color": null
     },
-    {
+    "c": {
       "name": "C",
-      "color": "#555555",
-      "value": "c"
+      "color": "#555555"
     },
-    {
+    "c%23": {
       "name": "C#",
-      "color": "#178600",
-      "value": "c%23"
+      "color": "#178600"
     },
-    {
+    "c++": {
       "name": "C++",
-      "color": "#f34b7d",
-      "value": "c++"
+      "color": "#f34b7d"
     },
-    {
+    "c-objdump": {
       "name": "C-ObjDump",
-      "color": null,
-      "value": "c-objdump"
+      "color": null
     },
-    {
+    "c2hs-haskell": {
       "name": "C2hs Haskell",
-      "color": null,
-      "value": "c2hs-haskell"
+      "color": null
     },
-    {
+    "cap'n-proto": {
       "name": "Cap'n Proto",
-      "color": null,
-      "value": "cap'n-proto"
+      "color": null
     },
-    {
+    "cartocss": {
       "name": "CartoCSS",
-      "color": null,
-      "value": "cartocss"
+      "color": null
     },
-    {
+    "ceylon": {
       "name": "Ceylon",
-      "color": "#dfa535",
-      "value": "ceylon"
+      "color": "#dfa535"
     },
-    {
+    "chapel": {
       "name": "Chapel",
-      "color": "#8dc63f",
-      "value": "chapel"
+      "color": "#8dc63f"
     },
-    {
+    "charity": {
       "name": "Charity",
-      "color": null,
-      "value": "charity"
+      "color": null
     },
-    {
+    "chuck": {
       "name": "ChucK",
-      "color": null,
-      "value": "chuck"
+      "color": null
     },
-    {
+    "cirru": {
       "name": "Cirru",
-      "color": "#ccccff",
-      "value": "cirru"
+      "color": "#ccccff"
     },
-    {
+    "clarion": {
       "name": "Clarion",
-      "color": "#db901e",
-      "value": "clarion"
+      "color": "#db901e"
     },
-    {
+    "clean": {
       "name": "Clean",
-      "color": "#3F85AF",
-      "value": "clean"
+      "color": "#3F85AF"
     },
-    {
+    "click": {
       "name": "Click",
-      "color": "#E4E6F3",
-      "value": "click"
+      "color": "#E4E6F3"
     },
-    {
+    "clips": {
       "name": "CLIPS",
-      "color": null,
-      "value": "clips"
+      "color": null
     },
-    {
+    "clojure": {
       "name": "Clojure",
-      "color": "#db5855",
-      "value": "clojure"
+      "color": "#db5855"
     },
-    {
+    "closure-templates": {
       "name": "Closure Templates",
-      "color": null,
-      "value": "closure-templates"
+      "color": null
     },
-    {
+    "cloud-firestore-security-rules": {
       "name": "Cloud Firestore Security Rules",
-      "color": null,
-      "value": "cloud-firestore-security-rules"
+      "color": null
     },
-    {
+    "cmake": {
       "name": "CMake",
-      "color": null,
-      "value": "cmake"
+      "color": null
     },
-    {
+    "cobol": {
       "name": "COBOL",
-      "color": null,
-      "value": "cobol"
+      "color": null
     },
-    {
+    "coffeescript": {
       "name": "CoffeeScript",
-      "color": "#244776",
-      "value": "coffeescript"
+      "color": "#244776"
     },
-    {
+    "coldfusion": {
       "name": "ColdFusion",
-      "color": "#ed2cd6",
-      "value": "coldfusion"
+      "color": "#ed2cd6"
     },
-    {
+    "coldfusion-cfc": {
       "name": "ColdFusion CFC",
-      "color": null,
-      "value": "coldfusion-cfc"
+      "color": null
     },
-    {
+    "collada": {
       "name": "COLLADA",
-      "color": null,
-      "value": "collada"
+      "color": null
     },
-    {
+    "common-lisp": {
       "name": "Common Lisp",
-      "color": "#3fb68b",
-      "value": "common-lisp"
+      "color": "#3fb68b"
     },
-    {
+    "common-workflow-language": {
       "name": "Common Workflow Language",
-      "color": "#B5314C",
-      "value": "common-workflow-language"
+      "color": "#B5314C"
     },
-    {
+    "component-pascal": {
       "name": "Component Pascal",
-      "color": "#B0CE4E",
-      "value": "component-pascal"
+      "color": "#B0CE4E"
     },
-    {
+    "conll-u": {
       "name": "CoNLL-U",
-      "color": null,
-      "value": "conll-u"
+      "color": null
     },
-    {
+    "cool": {
       "name": "Cool",
-      "color": null,
-      "value": "cool"
+      "color": null
     },
-    {
+    "coq": {
       "name": "Coq",
-      "color": null,
-      "value": "coq"
+      "color": null
     },
-    {
+    "cpp-objdump": {
       "name": "Cpp-ObjDump",
-      "color": null,
-      "value": "cpp-objdump"
+      "color": null
     },
-    {
+    "creole": {
       "name": "Creole",
-      "color": null,
-      "value": "creole"
+      "color": null
     },
-    {
+    "crystal": {
       "name": "Crystal",
-      "color": "#776791",
-      "value": "crystal"
+      "color": "#776791"
     },
-    {
+    "cson": {
       "name": "CSON",
-      "color": null,
-      "value": "cson"
+      "color": null
     },
-    {
+    "csound": {
       "name": "Csound",
-      "color": null,
-      "value": "csound"
+      "color": null
     },
-    {
+    "csound-document": {
       "name": "Csound Document",
-      "color": null,
-      "value": "csound-document"
+      "color": null
     },
-    {
+    "csound-score": {
       "name": "Csound Score",
-      "color": null,
-      "value": "csound-score"
+      "color": null
     },
-    {
+    "css": {
       "name": "CSS",
-      "color": "#563d7c",
-      "value": "css"
+      "color": "#563d7c"
     },
-    {
+    "csv": {
       "name": "CSV",
-      "color": null,
-      "value": "csv"
+      "color": null
     },
-    {
+    "cuda": {
       "name": "Cuda",
-      "color": "#3A4E3A",
-      "value": "cuda"
+      "color": "#3A4E3A"
     },
-    {
+    "cweb": {
       "name": "CWeb",
-      "color": null,
-      "value": "cweb"
+      "color": null
     },
-    {
+    "cycript": {
       "name": "Cycript",
-      "color": null,
-      "value": "cycript"
+      "color": null
     },
-    {
+    "cython": {
       "name": "Cython",
-      "color": null,
-      "value": "cython"
+      "color": null
     },
-    {
+    "d": {
       "name": "D",
-      "color": "#ba595e",
-      "value": "d"
+      "color": "#ba595e"
     },
-    {
+    "d-objdump": {
       "name": "D-ObjDump",
-      "color": null,
-      "value": "d-objdump"
+      "color": null
     },
-    {
+    "darcs-patch": {
       "name": "Darcs Patch",
-      "color": null,
-      "value": "darcs-patch"
+      "color": null
     },
-    {
+    "dart": {
       "name": "Dart",
-      "color": "#00B4AB",
-      "value": "dart"
+      "color": "#00B4AB"
     },
-    {
+    "dataweave": {
       "name": "DataWeave",
-      "color": "#003a52",
-      "value": "dataweave"
+      "color": "#003a52"
     },
-    {
+    "desktop": {
       "name": "desktop",
-      "color": null,
-      "value": "desktop"
+      "color": null
     },
-    {
+    "diff": {
       "name": "Diff",
-      "color": null,
-      "value": "diff"
+      "color": null
     },
-    {
+    "digital-command-language": {
       "name": "DIGITAL Command Language",
-      "color": null,
-      "value": "digital-command-language"
+      "color": null
     },
-    {
+    "dm": {
       "name": "DM",
-      "color": "#447265",
-      "value": "dm"
+      "color": "#447265"
     },
-    {
+    "dns-zone": {
       "name": "DNS Zone",
-      "color": null,
-      "value": "dns-zone"
+      "color": null
     },
-    {
+    "dockerfile": {
       "name": "Dockerfile",
-      "color": "#0db7ed",
-      "value": "dockerfile"
+      "color": "#0db7ed"
     },
-    {
+    "dogescript": {
       "name": "Dogescript",
-      "color": "#cca760",
-      "value": "dogescript"
+      "color": "#cca760"
     },
-    {
+    "dtrace": {
       "name": "DTrace",
-      "color": null,
-      "value": "dtrace"
+      "color": null
     },
-    {
+    "dylan": {
       "name": "Dylan",
-      "color": "#6c616e",
-      "value": "dylan"
+      "color": "#6c616e"
     },
-    {
+    "e": {
       "name": "E",
-      "color": "#ccce35",
-      "value": "e"
+      "color": "#ccce35"
     },
-    {
+    "eagle": {
       "name": "Eagle",
-      "color": null,
-      "value": "eagle"
+      "color": null
     },
-    {
+    "easybuild": {
       "name": "Easybuild",
-      "color": null,
-      "value": "easybuild"
+      "color": null
     },
-    {
+    "ebnf": {
       "name": "EBNF",
-      "color": null,
-      "value": "ebnf"
+      "color": null
     },
-    {
+    "ec": {
       "name": "eC",
-      "color": "#913960",
-      "value": "ec"
+      "color": "#913960"
     },
-    {
+    "ecere-projects": {
       "name": "Ecere Projects",
-      "color": null,
-      "value": "ecere-projects"
+      "color": null
     },
-    {
+    "ecl": {
       "name": "ECL",
-      "color": "#8a1267",
-      "value": "ecl"
+      "color": "#8a1267"
     },
-    {
+    "eclipse": {
       "name": "ECLiPSe",
-      "color": null,
-      "value": "eclipse"
+      "color": null
     },
-    {
+    "edje-data-collection": {
       "name": "Edje Data Collection",
-      "color": null,
-      "value": "edje-data-collection"
+      "color": null
     },
-    {
+    "edn": {
       "name": "edn",
-      "color": null,
-      "value": "edn"
+      "color": null
     },
-    {
+    "eiffel": {
       "name": "Eiffel",
-      "color": "#946d57",
-      "value": "eiffel"
+      "color": "#946d57"
     },
-    {
+    "ejs": {
       "name": "EJS",
-      "color": null,
-      "value": "ejs"
+      "color": null
     },
-    {
+    "elixir": {
       "name": "Elixir",
-      "color": "#6e4a7e",
-      "value": "elixir"
+      "color": "#6e4a7e"
     },
-    {
+    "elm": {
       "name": "Elm",
-      "color": "#60B5CC",
-      "value": "elm"
+      "color": "#60B5CC"
     },
-    {
+    "emacs-lisp": {
       "name": "Emacs Lisp",
-      "color": "#c065db",
-      "value": "emacs-lisp"
+      "color": "#c065db"
     },
-    {
+    "emberscript": {
       "name": "EmberScript",
-      "color": "#FFF4F3",
-      "value": "emberscript"
+      "color": "#FFF4F3"
     },
-    {
+    "eq": {
       "name": "EQ",
-      "color": "#a78649",
-      "value": "eq"
+      "color": "#a78649"
     },
-    {
+    "erlang": {
       "name": "Erlang",
-      "color": "#B83998",
-      "value": "erlang"
+      "color": "#B83998"
     },
-    {
+    "f%23": {
       "name": "F#",
-      "color": "#b845fc",
-      "value": "f%23"
+      "color": "#b845fc"
     },
-    {
+    "factor": {
       "name": "Factor",
-      "color": "#636746",
-      "value": "factor"
+      "color": "#636746"
     },
-    {
+    "fancy": {
       "name": "Fancy",
-      "color": "#7b9db4",
-      "value": "fancy"
+      "color": "#7b9db4"
     },
-    {
+    "fantom": {
       "name": "Fantom",
-      "color": "#14253c",
-      "value": "fantom"
+      "color": "#14253c"
     },
-    {
+    "filebench-wml": {
       "name": "Filebench WML",
-      "color": null,
-      "value": "filebench-wml"
+      "color": null
     },
-    {
+    "filterscript": {
       "name": "Filterscript",
-      "color": null,
-      "value": "filterscript"
+      "color": null
     },
-    {
+    "fish": {
       "name": "fish",
-      "color": null,
-      "value": "fish"
+      "color": null
     },
-    {
+    "flux": {
       "name": "FLUX",
-      "color": "#88ccff",
-      "value": "flux"
+      "color": "#88ccff"
     },
-    {
+    "formatted": {
       "name": "Formatted",
-      "color": null,
-      "value": "formatted"
+      "color": null
     },
-    {
+    "forth": {
       "name": "Forth",
-      "color": "#341708",
-      "value": "forth"
+      "color": "#341708"
     },
-    {
+    "fortran": {
       "name": "Fortran",
-      "color": "#4d41b1",
-      "value": "fortran"
+      "color": "#4d41b1"
     },
-    {
+    "freemarker": {
       "name": "FreeMarker",
-      "color": "#0050b2",
-      "value": "freemarker"
+      "color": "#0050b2"
     },
-    {
+    "frege": {
       "name": "Frege",
-      "color": "#00cafe",
-      "value": "frege"
+      "color": "#00cafe"
     },
-    {
+    "g-code": {
       "name": "G-code",
-      "color": null,
-      "value": "g-code"
+      "color": null
     },
-    {
+    "game-maker-language": {
       "name": "Game Maker Language",
-      "color": "#8fb200",
-      "value": "game-maker-language"
+      "color": "#8fb200"
     },
-    {
+    "gams": {
       "name": "GAMS",
-      "color": null,
-      "value": "gams"
+      "color": null
     },
-    {
+    "gap": {
       "name": "GAP",
-      "color": null,
-      "value": "gap"
+      "color": null
     },
-    {
+    "gcc-machine-description": {
       "name": "GCC Machine Description",
-      "color": null,
-      "value": "gcc-machine-description"
+      "color": null
     },
-    {
+    "gdb": {
       "name": "GDB",
-      "color": null,
-      "value": "gdb"
+      "color": null
     },
-    {
+    "gdscript": {
       "name": "GDScript",
-      "color": null,
-      "value": "gdscript"
+      "color": null
     },
-    {
+    "genie": {
       "name": "Genie",
-      "color": "#fb855d",
-      "value": "genie"
+      "color": "#fb855d"
     },
-    {
+    "genshi": {
       "name": "Genshi",
-      "color": null,
-      "value": "genshi"
+      "color": null
     },
-    {
+    "gentoo-ebuild": {
       "name": "Gentoo Ebuild",
-      "color": null,
-      "value": "gentoo-ebuild"
+      "color": null
     },
-    {
+    "gentoo-eclass": {
       "name": "Gentoo Eclass",
-      "color": null,
-      "value": "gentoo-eclass"
+      "color": null
     },
-    {
+    "gerber-image": {
       "name": "Gerber Image",
-      "color": null,
-      "value": "gerber-image"
+      "color": null
     },
-    {
+    "gettext-catalog": {
       "name": "Gettext Catalog",
-      "color": null,
-      "value": "gettext-catalog"
+      "color": null
     },
-    {
+    "gherkin": {
       "name": "Gherkin",
-      "color": "#5B2063",
-      "value": "gherkin"
+      "color": "#5B2063"
     },
-    {
+    "glsl": {
       "name": "GLSL",
-      "color": null,
-      "value": "glsl"
+      "color": null
     },
-    {
+    "glyph": {
       "name": "Glyph",
-      "color": "#e4cc98",
-      "value": "glyph"
+      "color": "#e4cc98"
     },
-    {
+    "gn": {
       "name": "GN",
-      "color": null,
-      "value": "gn"
+      "color": null
     },
-    {
+    "gnuplot": {
       "name": "Gnuplot",
-      "color": "#f0a9f0",
-      "value": "gnuplot"
+      "color": "#f0a9f0"
     },
-    {
+    "go": {
       "name": "Go",
-      "color": "#375eab",
-      "value": "go"
+      "color": "#375eab"
     },
-    {
+    "golo": {
       "name": "Golo",
-      "color": "#88562A",
-      "value": "golo"
+      "color": "#88562A"
     },
-    {
+    "gosu": {
       "name": "Gosu",
-      "color": "#82937f",
-      "value": "gosu"
+      "color": "#82937f"
     },
-    {
+    "grace": {
       "name": "Grace",
-      "color": null,
-      "value": "grace"
+      "color": null
     },
-    {
+    "gradle": {
       "name": "Gradle",
-      "color": null,
-      "value": "gradle"
+      "color": null
     },
-    {
+    "grammatical-framework": {
       "name": "Grammatical Framework",
-      "color": "#79aa7a",
-      "value": "grammatical-framework"
+      "color": "#79aa7a"
     },
-    {
+    "graph-modeling-language": {
       "name": "Graph Modeling Language",
-      "color": null,
-      "value": "graph-modeling-language"
+      "color": null
     },
-    {
+    "graphql": {
       "name": "GraphQL",
-      "color": null,
-      "value": "graphql"
+      "color": null
     },
-    {
+    "graphviz-(dot)": {
       "name": "Graphviz (DOT)",
-      "color": null,
-      "value": "graphviz-(dot)"
+      "color": null
     },
-    {
+    "groovy": {
       "name": "Groovy",
-      "color": "#e69f56",
-      "value": "groovy"
+      "color": "#e69f56"
     },
-    {
+    "groovy-server-pages": {
       "name": "Groovy Server Pages",
-      "color": null,
-      "value": "groovy-server-pages"
+      "color": null
     },
-    {
+    "hack": {
       "name": "Hack",
-      "color": "#878787",
-      "value": "hack"
+      "color": "#878787"
     },
-    {
+    "haml": {
       "name": "Haml",
-      "color": null,
-      "value": "haml"
+      "color": null
     },
-    {
+    "handlebars": {
       "name": "Handlebars",
-      "color": null,
-      "value": "handlebars"
+      "color": null
     },
-    {
+    "harbour": {
       "name": "Harbour",
-      "color": "#0e60e3",
-      "value": "harbour"
+      "color": "#0e60e3"
     },
-    {
+    "haskell": {
       "name": "Haskell",
-      "color": "#5e5086",
-      "value": "haskell"
+      "color": "#5e5086"
     },
-    {
+    "haxe": {
       "name": "Haxe",
-      "color": "#df7900",
-      "value": "haxe"
+      "color": "#df7900"
     },
-    {
+    "hcl": {
       "name": "HCL",
-      "color": null,
-      "value": "hcl"
+      "color": null
     },
-    {
+    "hiveql": {
       "name": "HiveQL",
-      "color": "#dce200",
-      "value": "hiveql"
+      "color": "#dce200"
     },
-    {
+    "hlsl": {
       "name": "HLSL",
-      "color": null,
-      "value": "hlsl"
+      "color": null
     },
-    {
+    "html": {
       "name": "HTML",
-      "color": "#e34c26",
-      "value": "html"
+      "color": "#e34c26"
     },
-    {
+    "html+django": {
       "name": "HTML+Django",
-      "color": null,
-      "value": "html+django"
+      "color": null
     },
-    {
+    "html+ecr": {
       "name": "HTML+ECR",
-      "color": null,
-      "value": "html+ecr"
+      "color": null
     },
-    {
+    "html+eex": {
       "name": "HTML+EEX",
-      "color": null,
-      "value": "html+eex"
+      "color": null
     },
-    {
+    "html+erb": {
       "name": "HTML+ERB",
-      "color": null,
-      "value": "html+erb"
+      "color": null
     },
-    {
+    "html+php": {
       "name": "HTML+PHP",
-      "color": null,
-      "value": "html+php"
+      "color": null
     },
-    {
+    "http": {
       "name": "HTTP",
-      "color": null,
-      "value": "http"
+      "color": null
     },
-    {
+    "hxml": {
       "name": "HXML",
-      "color": null,
-      "value": "hxml"
+      "color": null
     },
-    {
+    "hy": {
       "name": "Hy",
-      "color": "#7790B2",
-      "value": "hy"
+      "color": "#7790B2"
     },
-    {
+    "hyphy": {
       "name": "HyPhy",
-      "color": null,
-      "value": "hyphy"
+      "color": null
     },
-    {
+    "idl": {
       "name": "IDL",
-      "color": "#a3522f",
-      "value": "idl"
+      "color": "#a3522f"
     },
-    {
+    "idris": {
       "name": "Idris",
-      "color": "#b30000",
-      "value": "idris"
+      "color": "#b30000"
     },
-    {
+    "igor-pro": {
       "name": "IGOR Pro",
-      "color": null,
-      "value": "igor-pro"
+      "color": null
     },
-    {
+    "inform-7": {
       "name": "Inform 7",
-      "color": null,
-      "value": "inform-7"
+      "color": null
     },
-    {
+    "ini": {
       "name": "INI",
-      "color": null,
-      "value": "ini"
+      "color": null
     },
-    {
+    "inno-setup": {
       "name": "Inno Setup",
-      "color": null,
-      "value": "inno-setup"
+      "color": null
     },
-    {
+    "io": {
       "name": "Io",
-      "color": "#a9188d",
-      "value": "io"
+      "color": "#a9188d"
     },
-    {
+    "ioke": {
       "name": "Ioke",
-      "color": "#078193",
-      "value": "ioke"
+      "color": "#078193"
     },
-    {
+    "irc-log": {
       "name": "IRC log",
-      "color": null,
-      "value": "irc-log"
+      "color": null
     },
-    {
+    "isabelle": {
       "name": "Isabelle",
-      "color": "#FEFE00",
-      "value": "isabelle"
+      "color": "#FEFE00"
     },
-    {
+    "isabelle-root": {
       "name": "Isabelle ROOT",
-      "color": null,
-      "value": "isabelle-root"
+      "color": null
     },
-    {
+    "j": {
       "name": "J",
-      "color": "#9EEDFF",
-      "value": "j"
+      "color": "#9EEDFF"
     },
-    {
+    "jasmin": {
       "name": "Jasmin",
-      "color": null,
-      "value": "jasmin"
+      "color": null
     },
-    {
+    "java": {
       "name": "Java",
-      "color": "#b07219",
-      "value": "java"
+      "color": "#b07219"
     },
-    {
+    "java-server-pages": {
       "name": "Java Server Pages",
-      "color": null,
-      "value": "java-server-pages"
+      "color": null
     },
-    {
+    "javascript": {
       "name": "JavaScript",
-      "color": "#f1e05a",
-      "value": "javascript"
+      "color": "#f1e05a"
     },
-    {
+    "jflex": {
       "name": "JFlex",
-      "color": null,
-      "value": "jflex"
+      "color": null
     },
-    {
+    "jison": {
       "name": "Jison",
-      "color": null,
-      "value": "jison"
+      "color": null
     },
-    {
+    "jison-lex": {
       "name": "Jison Lex",
-      "color": null,
-      "value": "jison-lex"
+      "color": null
     },
-    {
+    "jolie": {
       "name": "Jolie",
-      "color": "#843179",
-      "value": "jolie"
+      "color": "#843179"
     },
-    {
+    "json": {
       "name": "JSON",
-      "color": null,
-      "value": "json"
+      "color": null
     },
-    {
+    "json-with-comments": {
       "name": "JSON with Comments",
-      "color": null,
-      "value": "json-with-comments"
+      "color": null
     },
-    {
+    "json5": {
       "name": "JSON5",
-      "color": null,
-      "value": "json5"
+      "color": null
     },
-    {
+    "jsoniq": {
       "name": "JSONiq",
-      "color": "#40d47e",
-      "value": "jsoniq"
+      "color": "#40d47e"
     },
-    {
+    "jsonld": {
       "name": "JSONLD",
-      "color": null,
-      "value": "jsonld"
+      "color": null
     },
-    {
+    "jsx": {
       "name": "JSX",
-      "color": null,
-      "value": "jsx"
+      "color": null
     },
-    {
+    "julia": {
       "name": "Julia",
-      "color": "#a270ba",
-      "value": "julia"
+      "color": "#a270ba"
     },
-    {
+    "jupyter-notebook": {
       "name": "Jupyter Notebook",
-      "color": "#DA5B0B",
-      "value": "jupyter-notebook"
+      "color": "#DA5B0B"
     },
-    {
+    "kicad-layout": {
       "name": "KiCad Layout",
-      "color": null,
-      "value": "kicad-layout"
+      "color": null
     },
-    {
+    "kicad-legacy-layout": {
       "name": "KiCad Legacy Layout",
-      "color": null,
-      "value": "kicad-legacy-layout"
+      "color": null
     },
-    {
+    "kicad-schematic": {
       "name": "KiCad Schematic",
-      "color": null,
-      "value": "kicad-schematic"
+      "color": null
     },
-    {
+    "kit": {
       "name": "Kit",
-      "color": null,
-      "value": "kit"
+      "color": null
     },
-    {
+    "kotlin": {
       "name": "Kotlin",
-      "color": "#F18E33",
-      "value": "kotlin"
+      "color": "#F18E33"
     },
-    {
+    "krl": {
       "name": "KRL",
-      "color": "#28431f",
-      "value": "krl"
+      "color": "#28431f"
     },
-    {
+    "labview": {
       "name": "LabVIEW",
-      "color": null,
-      "value": "labview"
+      "color": null
     },
-    {
+    "lasso": {
       "name": "Lasso",
-      "color": "#999999",
-      "value": "lasso"
+      "color": "#999999"
     },
-    {
+    "latte": {
       "name": "Latte",
-      "color": null,
-      "value": "latte"
+      "color": null
     },
-    {
+    "lean": {
       "name": "Lean",
-      "color": null,
-      "value": "lean"
+      "color": null
     },
-    {
+    "less": {
       "name": "Less",
-      "color": null,
-      "value": "less"
+      "color": null
     },
-    {
+    "lex": {
       "name": "Lex",
-      "color": "#DBCA00",
-      "value": "lex"
+      "color": "#DBCA00"
     },
-    {
+    "lfe": {
       "name": "LFE",
-      "color": "#4C3023",
-      "value": "lfe"
+      "color": "#4C3023"
     },
-    {
+    "lilypond": {
       "name": "LilyPond",
-      "color": null,
-      "value": "lilypond"
+      "color": null
     },
-    {
+    "limbo": {
       "name": "Limbo",
-      "color": null,
-      "value": "limbo"
+      "color": null
     },
-    {
+    "linker-script": {
       "name": "Linker Script",
-      "color": null,
-      "value": "linker-script"
+      "color": null
     },
-    {
+    "linux-kernel-module": {
       "name": "Linux Kernel Module",
-      "color": null,
-      "value": "linux-kernel-module"
+      "color": null
     },
-    {
+    "liquid": {
       "name": "Liquid",
-      "color": null,
-      "value": "liquid"
+      "color": null
     },
-    {
+    "literate-agda": {
       "name": "Literate Agda",
-      "color": null,
-      "value": "literate-agda"
+      "color": null
     },
-    {
+    "literate-coffeescript": {
       "name": "Literate CoffeeScript",
-      "color": null,
-      "value": "literate-coffeescript"
+      "color": null
     },
-    {
+    "literate-haskell": {
       "name": "Literate Haskell",
-      "color": null,
-      "value": "literate-haskell"
+      "color": null
     },
-    {
+    "livescript": {
       "name": "LiveScript",
-      "color": "#499886",
-      "value": "livescript"
+      "color": "#499886"
     },
-    {
+    "llvm": {
       "name": "LLVM",
-      "color": "#185619",
-      "value": "llvm"
+      "color": "#185619"
     },
-    {
+    "logos": {
       "name": "Logos",
-      "color": null,
-      "value": "logos"
+      "color": null
     },
-    {
+    "logtalk": {
       "name": "Logtalk",
-      "color": null,
-      "value": "logtalk"
+      "color": null
     },
-    {
+    "lolcode": {
       "name": "LOLCODE",
-      "color": "#cc9900",
-      "value": "lolcode"
+      "color": "#cc9900"
     },
-    {
+    "lookml": {
       "name": "LookML",
-      "color": "#652B81",
-      "value": "lookml"
+      "color": "#652B81"
     },
-    {
+    "loomscript": {
       "name": "LoomScript",
-      "color": null,
-      "value": "loomscript"
+      "color": null
     },
-    {
+    "lsl": {
       "name": "LSL",
-      "color": "#3d9970",
-      "value": "lsl"
+      "color": "#3d9970"
     },
-    {
+    "lua": {
       "name": "Lua",
-      "color": "#000080",
-      "value": "lua"
+      "color": "#000080"
     },
-    {
+    "m": {
       "name": "M",
-      "color": null,
-      "value": "m"
+      "color": null
     },
-    {
+    "m4": {
       "name": "M4",
-      "color": null,
-      "value": "m4"
+      "color": null
     },
-    {
+    "m4sugar": {
       "name": "M4Sugar",
-      "color": null,
-      "value": "m4sugar"
+      "color": null
     },
-    {
+    "makefile": {
       "name": "Makefile",
-      "color": "#427819",
-      "value": "makefile"
+      "color": "#427819"
     },
-    {
+    "mako": {
       "name": "Mako",
-      "color": null,
-      "value": "mako"
+      "color": null
     },
-    {
+    "markdown": {
       "name": "Markdown",
-      "color": null,
-      "value": "markdown"
+      "color": null
     },
-    {
+    "marko": {
       "name": "Marko",
-      "color": null,
-      "value": "marko"
+      "color": null
     },
-    {
+    "mask": {
       "name": "Mask",
-      "color": "#f97732",
-      "value": "mask"
+      "color": "#f97732"
     },
-    {
+    "mathematica": {
       "name": "Mathematica",
-      "color": null,
-      "value": "mathematica"
+      "color": null
     },
-    {
+    "matlab": {
       "name": "Matlab",
-      "color": "#e16737",
-      "value": "matlab"
+      "color": "#e16737"
     },
-    {
+    "maven-pom": {
       "name": "Maven POM",
-      "color": null,
-      "value": "maven-pom"
+      "color": null
     },
-    {
+    "max": {
       "name": "Max",
-      "color": "#c4a79c",
-      "value": "max"
+      "color": "#c4a79c"
     },
-    {
+    "maxscript": {
       "name": "MAXScript",
-      "color": "#00a6a6",
-      "value": "maxscript"
+      "color": "#00a6a6"
     },
-    {
+    "mediawiki": {
       "name": "MediaWiki",
-      "color": null,
-      "value": "mediawiki"
+      "color": null
     },
-    {
+    "mercury": {
       "name": "Mercury",
-      "color": "#ff2b2b",
-      "value": "mercury"
+      "color": "#ff2b2b"
     },
-    {
+    "meson": {
       "name": "Meson",
-      "color": "#007800",
-      "value": "meson"
+      "color": "#007800"
     },
-    {
+    "metal": {
       "name": "Metal",
-      "color": "#8f14e9",
-      "value": "metal"
+      "color": "#8f14e9"
     },
-    {
+    "minid": {
       "name": "MiniD",
-      "color": null,
-      "value": "minid"
+      "color": null
     },
-    {
+    "mirah": {
       "name": "Mirah",
-      "color": "#c7a938",
-      "value": "mirah"
+      "color": "#c7a938"
     },
-    {
+    "modelica": {
       "name": "Modelica",
-      "color": null,
-      "value": "modelica"
+      "color": null
     },
-    {
+    "modula-2": {
       "name": "Modula-2",
-      "color": null,
-      "value": "modula-2"
+      "color": null
     },
-    {
+    "modula-3": {
       "name": "Modula-3",
-      "color": null,
-      "value": "modula-3"
+      "color": null
     },
-    {
+    "module-management-system": {
       "name": "Module Management System",
-      "color": null,
-      "value": "module-management-system"
+      "color": null
     },
-    {
+    "monkey": {
       "name": "Monkey",
-      "color": null,
-      "value": "monkey"
+      "color": null
     },
-    {
+    "moocode": {
       "name": "Moocode",
-      "color": null,
-      "value": "moocode"
+      "color": null
     },
-    {
+    "moonscript": {
       "name": "MoonScript",
-      "color": null,
-      "value": "moonscript"
+      "color": null
     },
-    {
+    "mql4": {
       "name": "MQL4",
-      "color": "#62A8D6",
-      "value": "mql4"
+      "color": "#62A8D6"
     },
-    {
+    "mql5": {
       "name": "MQL5",
-      "color": "#4A76B8",
-      "value": "mql5"
+      "color": "#4A76B8"
     },
-    {
+    "mtml": {
       "name": "MTML",
-      "color": "#b7e1f4",
-      "value": "mtml"
+      "color": "#b7e1f4"
     },
-    {
+    "muf": {
       "name": "MUF",
-      "color": null,
-      "value": "muf"
+      "color": null
     },
-    {
+    "mupad": {
       "name": "mupad",
-      "color": null,
-      "value": "mupad"
+      "color": null
     },
-    {
+    "myghty": {
       "name": "Myghty",
-      "color": null,
-      "value": "myghty"
+      "color": null
     },
-    {
+    "ncl": {
       "name": "NCL",
-      "color": "#28431f",
-      "value": "ncl"
+      "color": "#28431f"
     },
-    {
+    "nearley": {
       "name": "Nearley",
-      "color": "#990000",
-      "value": "nearley"
+      "color": "#990000"
     },
-    {
+    "nemerle": {
       "name": "Nemerle",
-      "color": "#3d3c6e",
-      "value": "nemerle"
+      "color": "#3d3c6e"
     },
-    {
+    "nesc": {
       "name": "nesC",
-      "color": "#94B0C7",
-      "value": "nesc"
+      "color": "#94B0C7"
     },
-    {
+    "netlinx": {
       "name": "NetLinx",
-      "color": "#0aa0ff",
-      "value": "netlinx"
+      "color": "#0aa0ff"
     },
-    {
+    "netlinx+erb": {
       "name": "NetLinx+ERB",
-      "color": "#747faa",
-      "value": "netlinx+erb"
+      "color": "#747faa"
     },
-    {
+    "netlogo": {
       "name": "NetLogo",
-      "color": "#ff6375",
-      "value": "netlogo"
+      "color": "#ff6375"
     },
-    {
+    "newlisp": {
       "name": "NewLisp",
-      "color": "#87AED7",
-      "value": "newlisp"
+      "color": "#87AED7"
     },
-    {
+    "nextflow": {
       "name": "Nextflow",
-      "color": "#3ac486",
-      "value": "nextflow"
+      "color": "#3ac486"
     },
-    {
+    "nginx": {
       "name": "Nginx",
-      "color": null,
-      "value": "nginx"
+      "color": null
     },
-    {
+    "nim": {
       "name": "Nim",
-      "color": "#37775b",
-      "value": "nim"
+      "color": "#37775b"
     },
-    {
+    "ninja": {
       "name": "Ninja",
-      "color": null,
-      "value": "ninja"
+      "color": null
     },
-    {
+    "nit": {
       "name": "Nit",
-      "color": "#009917",
-      "value": "nit"
+      "color": "#009917"
     },
-    {
+    "nix": {
       "name": "Nix",
-      "color": "#7e7eff",
-      "value": "nix"
+      "color": "#7e7eff"
     },
-    {
+    "nl": {
       "name": "NL",
-      "color": null,
-      "value": "nl"
+      "color": null
     },
-    {
+    "nsis": {
       "name": "NSIS",
-      "color": null,
-      "value": "nsis"
+      "color": null
     },
-    {
+    "nu": {
       "name": "Nu",
-      "color": "#c9df40",
-      "value": "nu"
+      "color": "#c9df40"
     },
-    {
+    "numpy": {
       "name": "NumPy",
-      "color": null,
-      "value": "numpy"
+      "color": null
     },
-    {
+    "objdump": {
       "name": "ObjDump",
-      "color": null,
-      "value": "objdump"
+      "color": null
     },
-    {
+    "objective-c": {
       "name": "Objective-C",
-      "color": "#438eff",
-      "value": "objective-c"
+      "color": "#438eff"
     },
-    {
+    "objective-c++": {
       "name": "Objective-C++",
-      "color": "#6866fb",
-      "value": "objective-c++"
+      "color": "#6866fb"
     },
-    {
+    "objective-j": {
       "name": "Objective-J",
-      "color": "#ff0c5a",
-      "value": "objective-j"
+      "color": "#ff0c5a"
     },
-    {
+    "ocaml": {
       "name": "OCaml",
-      "color": "#3be133",
-      "value": "ocaml"
+      "color": "#3be133"
     },
-    {
+    "omgrofl": {
       "name": "Omgrofl",
-      "color": "#cabbff",
-      "value": "omgrofl"
+      "color": "#cabbff"
     },
-    {
+    "ooc": {
       "name": "ooc",
-      "color": "#b0b77e",
-      "value": "ooc"
+      "color": "#b0b77e"
     },
-    {
+    "opa": {
       "name": "Opa",
-      "color": null,
-      "value": "opa"
+      "color": null
     },
-    {
+    "opal": {
       "name": "Opal",
-      "color": "#f7ede0",
-      "value": "opal"
+      "color": "#f7ede0"
     },
-    {
+    "opencl": {
       "name": "OpenCL",
-      "color": null,
-      "value": "opencl"
+      "color": null
     },
-    {
+    "openedge-abl": {
       "name": "OpenEdge ABL",
-      "color": null,
-      "value": "openedge-abl"
+      "color": null
     },
-    {
+    "openrc-runscript": {
       "name": "OpenRC runscript",
-      "color": null,
-      "value": "openrc-runscript"
+      "color": null
     },
-    {
+    "openscad": {
       "name": "OpenSCAD",
-      "color": null,
-      "value": "openscad"
+      "color": null
     },
-    {
+    "opentype-feature-file": {
       "name": "OpenType Feature File",
-      "color": null,
-      "value": "opentype-feature-file"
+      "color": null
     },
-    {
+    "org": {
       "name": "Org",
-      "color": null,
-      "value": "org"
+      "color": null
     },
-    {
+    "ox": {
       "name": "Ox",
-      "color": null,
-      "value": "ox"
+      "color": null
     },
-    {
+    "oxygene": {
       "name": "Oxygene",
-      "color": "#cdd0e3",
-      "value": "oxygene"
+      "color": "#cdd0e3"
     },
-    {
+    "oz": {
       "name": "Oz",
-      "color": "#fab738",
-      "value": "oz"
+      "color": "#fab738"
     },
-    {
+    "p4": {
       "name": "P4",
-      "color": "#7055b5",
-      "value": "p4"
+      "color": "#7055b5"
     },
-    {
+    "pan": {
       "name": "Pan",
-      "color": "#cc0000",
-      "value": "pan"
+      "color": "#cc0000"
     },
-    {
+    "papyrus": {
       "name": "Papyrus",
-      "color": "#6600cc",
-      "value": "papyrus"
+      "color": "#6600cc"
     },
-    {
+    "parrot": {
       "name": "Parrot",
-      "color": "#f3ca0a",
-      "value": "parrot"
+      "color": "#f3ca0a"
     },
-    {
+    "parrot-assembly": {
       "name": "Parrot Assembly",
-      "color": null,
-      "value": "parrot-assembly"
+      "color": null
     },
-    {
+    "parrot-internal-representation": {
       "name": "Parrot Internal Representation",
-      "color": null,
-      "value": "parrot-internal-representation"
+      "color": null
     },
-    {
+    "pascal": {
       "name": "Pascal",
-      "color": "#E3F171",
-      "value": "pascal"
+      "color": "#E3F171"
     },
-    {
+    "pawn": {
       "name": "PAWN",
-      "color": "#dbb284",
-      "value": "pawn"
+      "color": "#dbb284"
     },
-    {
+    "pep8": {
       "name": "Pep8",
-      "color": "#C76F5B",
-      "value": "pep8"
+      "color": "#C76F5B"
     },
-    {
+    "perl": {
       "name": "Perl",
-      "color": "#0298c3",
-      "value": "perl"
+      "color": "#0298c3"
     },
-    {
+    "perl-6": {
       "name": "Perl 6",
-      "color": "#0000fb",
-      "value": "perl-6"
+      "color": "#0000fb"
     },
-    {
+    "php": {
       "name": "PHP",
-      "color": "#4F5D95",
-      "value": "php"
+      "color": "#4F5D95"
     },
-    {
+    "pic": {
       "name": "Pic",
-      "color": null,
-      "value": "pic"
+      "color": null
     },
-    {
+    "pickle": {
       "name": "Pickle",
-      "color": null,
-      "value": "pickle"
+      "color": null
     },
-    {
+    "picolisp": {
       "name": "PicoLisp",
-      "color": null,
-      "value": "picolisp"
+      "color": null
     },
-    {
+    "piglatin": {
       "name": "PigLatin",
-      "color": "#fcd7de",
-      "value": "piglatin"
+      "color": "#fcd7de"
     },
-    {
+    "pike": {
       "name": "Pike",
-      "color": "#005390",
-      "value": "pike"
+      "color": "#005390"
     },
-    {
+    "plpgsql": {
       "name": "PLpgSQL",
-      "color": null,
-      "value": "plpgsql"
+      "color": null
     },
-    {
+    "plsql": {
       "name": "PLSQL",
-      "color": "#dad8d8",
-      "value": "plsql"
+      "color": "#dad8d8"
     },
-    {
+    "pod": {
       "name": "Pod",
-      "color": null,
-      "value": "pod"
+      "color": null
     },
-    {
+    "pogoscript": {
       "name": "PogoScript",
-      "color": "#d80074",
-      "value": "pogoscript"
+      "color": "#d80074"
     },
-    {
+    "pony": {
       "name": "Pony",
-      "color": null,
-      "value": "pony"
+      "color": null
     },
-    {
+    "postcss": {
       "name": "PostCSS",
-      "color": null,
-      "value": "postcss"
+      "color": null
     },
-    {
+    "postscript": {
       "name": "PostScript",
-      "color": "#da291c",
-      "value": "postscript"
+      "color": "#da291c"
     },
-    {
+    "pov-ray-sdl": {
       "name": "POV-Ray SDL",
-      "color": null,
-      "value": "pov-ray-sdl"
+      "color": null
     },
-    {
+    "powerbuilder": {
       "name": "PowerBuilder",
-      "color": "#8f0f8d",
-      "value": "powerbuilder"
+      "color": "#8f0f8d"
     },
-    {
+    "powershell": {
       "name": "PowerShell",
-      "color": "#012456",
-      "value": "powershell"
+      "color": "#012456"
     },
-    {
+    "processing": {
       "name": "Processing",
-      "color": "#0096D8",
-      "value": "processing"
+      "color": "#0096D8"
     },
-    {
+    "prolog": {
       "name": "Prolog",
-      "color": "#74283c",
-      "value": "prolog"
+      "color": "#74283c"
     },
-    {
+    "propeller-spin": {
       "name": "Propeller Spin",
-      "color": "#7fa2a7",
-      "value": "propeller-spin"
+      "color": "#7fa2a7"
     },
-    {
+    "protocol-buffer": {
       "name": "Protocol Buffer",
-      "color": null,
-      "value": "protocol-buffer"
+      "color": null
     },
-    {
+    "public-key": {
       "name": "Public Key",
-      "color": null,
-      "value": "public-key"
+      "color": null
     },
-    {
+    "pug": {
       "name": "Pug",
-      "color": null,
-      "value": "pug"
+      "color": null
     },
-    {
+    "puppet": {
       "name": "Puppet",
-      "color": "#302B6D",
-      "value": "puppet"
+      "color": "#302B6D"
     },
-    {
+    "pure-data": {
       "name": "Pure Data",
-      "color": null,
-      "value": "pure-data"
+      "color": null
     },
-    {
+    "purebasic": {
       "name": "PureBasic",
-      "color": "#5a6986",
-      "value": "purebasic"
+      "color": "#5a6986"
     },
-    {
+    "purescript": {
       "name": "PureScript",
-      "color": "#1D222D",
-      "value": "purescript"
+      "color": "#1D222D"
     },
-    {
+    "python": {
       "name": "Python",
-      "color": "#3572A5",
-      "value": "python"
+      "color": "#3572A5"
     },
-    {
+    "python-console": {
       "name": "Python console",
-      "color": null,
-      "value": "python-console"
+      "color": null
     },
-    {
+    "python-traceback": {
       "name": "Python traceback",
-      "color": null,
-      "value": "python-traceback"
+      "color": null
     },
-    {
+    "q": {
       "name": "q",
-      "color": "#0040cd",
-      "value": "q"
+      "color": "#0040cd"
     },
-    {
+    "qmake": {
       "name": "QMake",
-      "color": null,
-      "value": "qmake"
+      "color": null
     },
-    {
+    "qml": {
       "name": "QML",
-      "color": "#44a51c",
-      "value": "qml"
+      "color": "#44a51c"
     },
-    {
+    "quake": {
       "name": "Quake",
-      "color": null,
-      "value": "quake"
+      "color": null
     },
-    {
+    "r": {
       "name": "R",
-      "color": "#198CE7",
-      "value": "r"
+      "color": "#198CE7"
     },
-    {
+    "racket": {
       "name": "Racket",
-      "color": "#22228f",
-      "value": "racket"
+      "color": "#22228f"
     },
-    {
+    "ragel": {
       "name": "Ragel",
-      "color": "#9d5200",
-      "value": "ragel"
+      "color": "#9d5200"
     },
-    {
+    "raml": {
       "name": "RAML",
-      "color": "#77d9fb",
-      "value": "raml"
+      "color": "#77d9fb"
     },
-    {
+    "rascal": {
       "name": "Rascal",
-      "color": "#fffaa0",
-      "value": "rascal"
+      "color": "#fffaa0"
     },
-    {
+    "raw-token-data": {
       "name": "Raw token data",
-      "color": null,
-      "value": "raw-token-data"
+      "color": null
     },
-    {
+    "rdoc": {
       "name": "RDoc",
-      "color": null,
-      "value": "rdoc"
+      "color": null
     },
-    {
+    "realbasic": {
       "name": "REALbasic",
-      "color": null,
-      "value": "realbasic"
+      "color": null
     },
-    {
+    "reason": {
       "name": "Reason",
-      "color": null,
-      "value": "reason"
+      "color": null
     },
-    {
+    "rebol": {
       "name": "Rebol",
-      "color": "#358a5b",
-      "value": "rebol"
+      "color": "#358a5b"
     },
-    {
+    "red": {
       "name": "Red",
-      "color": "#f50000",
-      "value": "red"
+      "color": "#f50000"
     },
-    {
+    "redcode": {
       "name": "Redcode",
-      "color": null,
-      "value": "redcode"
+      "color": null
     },
-    {
+    "regular-expression": {
       "name": "Regular Expression",
-      "color": null,
-      "value": "regular-expression"
+      "color": null
     },
-    {
+    "ren'py": {
       "name": "Ren'Py",
-      "color": "#ff7f7f",
-      "value": "ren'py"
+      "color": "#ff7f7f"
     },
-    {
+    "renderscript": {
       "name": "RenderScript",
-      "color": null,
-      "value": "renderscript"
+      "color": null
     },
-    {
+    "restructuredtext": {
       "name": "reStructuredText",
-      "color": null,
-      "value": "restructuredtext"
+      "color": null
     },
-    {
+    "rexx": {
       "name": "REXX",
-      "color": null,
-      "value": "rexx"
+      "color": null
     },
-    {
+    "rhtml": {
       "name": "RHTML",
-      "color": null,
-      "value": "rhtml"
+      "color": null
     },
-    {
+    "ring": {
       "name": "Ring",
-      "color": "#0e60e3",
-      "value": "ring"
+      "color": "#0e60e3"
     },
-    {
+    "rmarkdown": {
       "name": "RMarkdown",
-      "color": null,
-      "value": "rmarkdown"
+      "color": null
     },
-    {
+    "robotframework": {
       "name": "RobotFramework",
-      "color": null,
-      "value": "robotframework"
+      "color": null
     },
-    {
+    "roff": {
       "name": "Roff",
-      "color": "#ecdebe",
-      "value": "roff"
+      "color": "#ecdebe"
     },
-    {
+    "rouge": {
       "name": "Rouge",
-      "color": "#cc0088",
-      "value": "rouge"
+      "color": "#cc0088"
     },
-    {
+    "rpc": {
       "name": "RPC",
-      "color": null,
-      "value": "rpc"
+      "color": null
     },
-    {
+    "rpm-spec": {
       "name": "RPM Spec",
-      "color": null,
-      "value": "rpm-spec"
+      "color": null
     },
-    {
+    "ruby": {
       "name": "Ruby",
-      "color": "#701516",
-      "value": "ruby"
+      "color": "#701516"
     },
-    {
+    "runoff": {
       "name": "RUNOFF",
-      "color": "#665a4e",
-      "value": "runoff"
+      "color": "#665a4e"
     },
-    {
+    "rust": {
       "name": "Rust",
-      "color": "#dea584",
-      "value": "rust"
+      "color": "#dea584"
     },
-    {
+    "sage": {
       "name": "Sage",
-      "color": null,
-      "value": "sage"
+      "color": null
     },
-    {
+    "saltstack": {
       "name": "SaltStack",
-      "color": "#646464",
-      "value": "saltstack"
+      "color": "#646464"
     },
-    {
+    "sas": {
       "name": "SAS",
-      "color": "#B34936",
-      "value": "sas"
+      "color": "#B34936"
     },
-    {
+    "sass": {
       "name": "Sass",
-      "color": null,
-      "value": "sass"
+      "color": null
     },
-    {
+    "scala": {
       "name": "Scala",
-      "color": "#c22d40",
-      "value": "scala"
+      "color": "#c22d40"
     },
-    {
+    "scaml": {
       "name": "Scaml",
-      "color": null,
-      "value": "scaml"
+      "color": null
     },
-    {
+    "scheme": {
       "name": "Scheme",
-      "color": "#1e4aec",
-      "value": "scheme"
+      "color": "#1e4aec"
     },
-    {
+    "scilab": {
       "name": "Scilab",
-      "color": null,
-      "value": "scilab"
+      "color": null
     },
-    {
+    "scss": {
       "name": "SCSS",
-      "color": null,
-      "value": "scss"
+      "color": null
     },
-    {
+    "sed": {
       "name": "sed",
-      "color": "#64b970",
-      "value": "sed"
+      "color": "#64b970"
     },
-    {
+    "self": {
       "name": "Self",
-      "color": "#0579aa",
-      "value": "self"
+      "color": "#0579aa"
     },
-    {
+    "shaderlab": {
       "name": "ShaderLab",
-      "color": null,
-      "value": "shaderlab"
+      "color": null
     },
-    {
+    "shell": {
       "name": "Shell",
-      "color": "#89e051",
-      "value": "shell"
+      "color": "#89e051"
     },
-    {
+    "shellsession": {
       "name": "ShellSession",
-      "color": null,
-      "value": "shellsession"
+      "color": null
     },
-    {
+    "shen": {
       "name": "Shen",
-      "color": "#120F14",
-      "value": "shen"
+      "color": "#120F14"
     },
-    {
+    "slash": {
       "name": "Slash",
-      "color": "#007eff",
-      "value": "slash"
+      "color": "#007eff"
     },
-    {
+    "slim": {
       "name": "Slim",
-      "color": null,
-      "value": "slim"
+      "color": null
     },
-    {
+    "smali": {
       "name": "Smali",
-      "color": null,
-      "value": "smali"
+      "color": null
     },
-    {
+    "smalltalk": {
       "name": "Smalltalk",
-      "color": "#596706",
-      "value": "smalltalk"
+      "color": "#596706"
     },
-    {
+    "smarty": {
       "name": "Smarty",
-      "color": null,
-      "value": "smarty"
+      "color": null
     },
-    {
+    "smt": {
       "name": "SMT",
-      "color": null,
-      "value": "smt"
+      "color": null
     },
-    {
+    "solidity": {
       "name": "Solidity",
-      "color": "#AA6746",
-      "value": "solidity"
+      "color": "#AA6746"
     },
-    {
+    "sourcepawn": {
       "name": "SourcePawn",
-      "color": "#5c7611",
-      "value": "sourcepawn"
+      "color": "#5c7611"
     },
-    {
+    "sparql": {
       "name": "SPARQL",
-      "color": null,
-      "value": "sparql"
+      "color": null
     },
-    {
+    "spline-font-database": {
       "name": "Spline Font Database",
-      "color": null,
-      "value": "spline-font-database"
+      "color": null
     },
-    {
+    "sqf": {
       "name": "SQF",
-      "color": "#3F3F3F",
-      "value": "sqf"
+      "color": "#3F3F3F"
     },
-    {
+    "sql": {
       "name": "SQL",
-      "color": null,
-      "value": "sql"
+      "color": null
     },
-    {
+    "sqlpl": {
       "name": "SQLPL",
-      "color": null,
-      "value": "sqlpl"
+      "color": null
     },
-    {
+    "squirrel": {
       "name": "Squirrel",
-      "color": "#800000",
-      "value": "squirrel"
+      "color": "#800000"
     },
-    {
+    "srecode-template": {
       "name": "SRecode Template",
-      "color": "#348a34",
-      "value": "srecode-template"
+      "color": "#348a34"
     },
-    {
+    "stan": {
       "name": "Stan",
-      "color": "#b2011d",
-      "value": "stan"
+      "color": "#b2011d"
     },
-    {
+    "standard-ml": {
       "name": "Standard ML",
-      "color": "#dc566d",
-      "value": "standard-ml"
+      "color": "#dc566d"
     },
-    {
+    "stata": {
       "name": "Stata",
-      "color": null,
-      "value": "stata"
+      "color": null
     },
-    {
+    "ston": {
       "name": "STON",
-      "color": null,
-      "value": "ston"
+      "color": null
     },
-    {
+    "stylus": {
       "name": "Stylus",
-      "color": null,
-      "value": "stylus"
+      "color": null
     },
-    {
-      "name": "JSON with Comments",
-      "color": null,
-      "value": "json-with-comments"
-    },
-    {
+    "subrip-text": {
       "name": "SubRip Text",
-      "color": null,
-      "value": "subrip-text"
+      "color": null
     },
-    {
+    "sugarss": {
       "name": "SugarSS",
-      "color": null,
-      "value": "sugarss"
+      "color": null
     },
-    {
+    "supercollider": {
       "name": "SuperCollider",
-      "color": "#46390b",
-      "value": "supercollider"
+      "color": "#46390b"
     },
-    {
+    "svg": {
       "name": "SVG",
-      "color": null,
-      "value": "svg"
+      "color": null
     },
-    {
+    "swift": {
       "name": "Swift",
-      "color": "#ffac45",
-      "value": "swift"
+      "color": "#ffac45"
     },
-    {
+    "systemverilog": {
       "name": "SystemVerilog",
-      "color": "#DAE1C2",
-      "value": "systemverilog"
+      "color": "#DAE1C2"
     },
-    {
+    "tcl": {
       "name": "Tcl",
-      "color": "#e4cc98",
-      "value": "tcl"
+      "color": "#e4cc98"
     },
-    {
+    "tcsh": {
       "name": "Tcsh",
-      "color": null,
-      "value": "tcsh"
+      "color": null
     },
-    {
+    "tea": {
       "name": "Tea",
-      "color": null,
-      "value": "tea"
+      "color": null
     },
-    {
+    "terra": {
       "name": "Terra",
-      "color": "#00004c",
-      "value": "terra"
+      "color": "#00004c"
     },
-    {
+    "tex": {
       "name": "TeX",
-      "color": "#3D6117",
-      "value": "tex"
+      "color": "#3D6117"
     },
-    {
+    "text": {
       "name": "Text",
-      "color": null,
-      "value": "text"
+      "color": null
     },
-    {
+    "textile": {
       "name": "Textile",
-      "color": null,
-      "value": "textile"
+      "color": null
     },
-    {
+    "thrift": {
       "name": "Thrift",
-      "color": null,
-      "value": "thrift"
+      "color": null
     },
-    {
+    "ti-program": {
       "name": "TI Program",
-      "color": "#A0AA87",
-      "value": "ti-program"
+      "color": "#A0AA87"
     },
-    {
+    "tla": {
       "name": "TLA",
-      "color": null,
-      "value": "tla"
+      "color": null
     },
-    {
+    "toml": {
       "name": "TOML",
-      "color": null,
-      "value": "toml"
+      "color": null
     },
-    {
+    "turing": {
       "name": "Turing",
-      "color": "#cf142b",
-      "value": "turing"
+      "color": "#cf142b"
     },
-    {
+    "turtle": {
       "name": "Turtle",
-      "color": null,
-      "value": "turtle"
+      "color": null
     },
-    {
+    "twig": {
       "name": "Twig",
-      "color": null,
-      "value": "twig"
+      "color": null
     },
-    {
+    "txl": {
       "name": "TXL",
-      "color": null,
-      "value": "txl"
+      "color": null
     },
-    {
+    "type-language": {
       "name": "Type Language",
-      "color": null,
-      "value": "type-language"
+      "color": null
     },
-    {
+    "typescript": {
       "name": "TypeScript",
-      "color": "#2b7489",
-      "value": "typescript"
+      "color": "#2b7489"
     },
-    {
+    "unified-parallel-c": {
       "name": "Unified Parallel C",
-      "color": null,
-      "value": "unified-parallel-c"
+      "color": null
     },
-    {
+    "unity3d-asset": {
       "name": "Unity3D Asset",
-      "color": null,
-      "value": "unity3d-asset"
+      "color": null
     },
-    {
+    "unix-assembly": {
       "name": "Unix Assembly",
-      "color": null,
-      "value": "unix-assembly"
+      "color": null
     },
-    {
+    "uno": {
       "name": "Uno",
-      "color": null,
-      "value": "uno"
+      "color": null
     },
-    {
+    "unrealscript": {
       "name": "UnrealScript",
-      "color": "#a54c4d",
-      "value": "unrealscript"
+      "color": "#a54c4d"
     },
-    {
+    "urweb": {
       "name": "UrWeb",
-      "color": null,
-      "value": "urweb"
+      "color": null
     },
-    {
+    "vala": {
       "name": "Vala",
-      "color": "#fbe5cd",
-      "value": "vala"
+      "color": "#fbe5cd"
     },
-    {
+    "vcl": {
       "name": "VCL",
-      "color": "#0298c3",
-      "value": "vcl"
+      "color": "#0298c3"
     },
-    {
+    "verilog": {
       "name": "Verilog",
-      "color": "#b2b7f8",
-      "value": "verilog"
+      "color": "#b2b7f8"
     },
-    {
+    "vhdl": {
       "name": "VHDL",
-      "color": "#adb2cb",
-      "value": "vhdl"
+      "color": "#adb2cb"
     },
-    {
+    "vim-script": {
       "name": "Vim script",
-      "color": "#199f4b",
-      "value": "vim-script"
+      "color": "#199f4b"
     },
-    {
+    "visual-basic": {
       "name": "Visual Basic",
-      "color": "#945db7",
-      "value": "visual-basic"
+      "color": "#945db7"
     },
-    {
+    "volt": {
       "name": "Volt",
-      "color": "#1F1F1F",
-      "value": "volt"
+      "color": "#1F1F1F"
     },
-    {
+    "vue": {
       "name": "Vue",
-      "color": "#2c3e50",
-      "value": "vue"
+      "color": "#2c3e50"
     },
-    {
+    "wavefront-material": {
       "name": "Wavefront Material",
-      "color": null,
-      "value": "wavefront-material"
+      "color": null
     },
-    {
+    "wavefront-object": {
       "name": "Wavefront Object",
-      "color": null,
-      "value": "wavefront-object"
+      "color": null
     },
-    {
+    "wdl": {
       "name": "wdl",
-      "color": "#42f1f4",
-      "value": "wdl"
+      "color": "#42f1f4"
     },
-    {
+    "web-ontology-language": {
       "name": "Web Ontology Language",
-      "color": null,
-      "value": "web-ontology-language"
+      "color": null
     },
-    {
+    "webassembly": {
       "name": "WebAssembly",
-      "color": "#04133b",
-      "value": "webassembly"
+      "color": "#04133b"
     },
-    {
+    "webidl": {
       "name": "WebIDL",
-      "color": null,
-      "value": "webidl"
+      "color": null
     },
-    {
+    "wisp": {
       "name": "wisp",
-      "color": "#7582D1",
-      "value": "wisp"
+      "color": "#7582D1"
     },
-    {
+    "world-of-warcraft-addon-data": {
       "name": "World of Warcraft Addon Data",
-      "color": null,
-      "value": "world-of-warcraft-addon-data"
+      "color": null
     },
-    {
+    "x-bitmap": {
       "name": "X BitMap",
-      "color": null,
-      "value": "x-bitmap"
+      "color": null
     },
-    {
+    "x-pixmap": {
       "name": "X PixMap",
-      "color": null,
-      "value": "x-pixmap"
+      "color": null
     },
-    {
+    "x10": {
       "name": "X10",
-      "color": "#4B6BEF",
-      "value": "x10"
+      "color": "#4B6BEF"
     },
-    {
+    "xbase": {
       "name": "xBase",
-      "color": "#403a40",
-      "value": "xbase"
+      "color": "#403a40"
     },
-    {
+    "xc": {
       "name": "XC",
-      "color": "#99DA07",
-      "value": "xc"
+      "color": "#99DA07"
     },
-    {
+    "xcompose": {
       "name": "XCompose",
-      "color": null,
-      "value": "xcompose"
+      "color": null
     },
-    {
+    "xml": {
       "name": "XML",
-      "color": null,
-      "value": "xml"
+      "color": null
     },
-    {
+    "xojo": {
       "name": "Xojo",
-      "color": null,
-      "value": "xojo"
+      "color": null
     },
-    {
+    "xpages": {
       "name": "XPages",
-      "color": null,
-      "value": "xpages"
+      "color": null
     },
-    {
+    "xproc": {
       "name": "XProc",
-      "color": null,
-      "value": "xproc"
+      "color": null
     },
-    {
+    "xquery": {
       "name": "XQuery",
-      "color": "#5232e7",
-      "value": "xquery"
+      "color": "#5232e7"
     },
-    {
+    "xs": {
       "name": "XS",
-      "color": null,
-      "value": "xs"
+      "color": null
     },
-    {
+    "xslt": {
       "name": "XSLT",
-      "color": "#EB8CEB",
-      "value": "xslt"
+      "color": "#EB8CEB"
     },
-    {
+    "xtend": {
       "name": "Xtend",
-      "color": null,
-      "value": "xtend"
+      "color": null
     },
-    {
+    "yacc": {
       "name": "Yacc",
-      "color": "#4B6C4B",
-      "value": "yacc"
+      "color": "#4B6C4B"
     },
-    {
+    "yaml": {
       "name": "YAML",
-      "color": null,
-      "value": "yaml"
+      "color": null
     },
-    {
+    "yang": {
       "name": "YANG",
-      "color": null,
-      "value": "yang"
+      "color": null
     },
-    {
+    "yara": {
       "name": "YARA",
-      "color": null,
-      "value": "yara"
+      "color": null
     },
-    {
+    "zephir": {
       "name": "Zephir",
-      "color": "#118f9e",
-      "value": "zephir"
+      "color": "#118f9e"
     },
-    {
+    "zimpl": {
       "name": "Zimpl",
-      "color": null,
-      "value": "zimpl"
+      "color": null
     }
-  ]
+  }
 }
