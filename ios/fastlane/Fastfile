@@ -5,7 +5,6 @@ platform :ios do
   lane :beta do
       build_app(
           scheme: "Genji"
-          export_method: "development"
       )
   end
 end
