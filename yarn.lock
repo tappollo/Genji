@@ -4591,8 +4591,8 @@ react-native-safe-area-view@^0.10.0:
     hoist-non-react-statics "^2.3.1"
 
 react-native-screens@^1.0.0-alpha.10:
-  version "1.0.0-alpha.10"
-  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.10.tgz#3e22e57592ad8050a8ebcc789d2d3da4dd5e94d9"
+  version "1.0.0-alpha.12"
+  resolved "https://registry.yarnpkg.com/react-native-screens/-/react-native-screens-1.0.0-alpha.12.tgz#5953c39c9dbfbe324610005e07d85a416081c48c"
 
 react-native-shake-event@^4.0.1:
   version "4.0.1"
