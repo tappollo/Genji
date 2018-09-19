@@ -60,6 +60,8 @@
 			</dict>
 		</dict>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Use to see what's trening near you</string>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Save image to your photos</string>
 	<key>UIAppFonts</key>
