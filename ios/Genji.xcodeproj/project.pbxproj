@@ -484,6 +484,7 @@
 		00E356F21AD99517003FC87E /* GenjiTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GenjiTests.m; sourceTree = "<group>"; };
 		0190C91F806940DE8242DFBF /* libBVLinearGradient.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = libBVLinearGradient.a; sourceTree = "<group>"; };
 		01FBF4C4B7EA4AA5A150C9C6 /* libRNVersionNumber-tvOS.a */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = archive.ar; path = "libRNVersionNumber-tvOS.a"; sourceTree = "<group>"; };
+		044C847621524ECC00116926 /* Genji.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = Genji.entitlements; path = Genji/Genji.entitlements; sourceTree = "<group>"; };
 		04879F6B214CB47100C537AD /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		04A02670214CC23D0009E47C /* RCTLinking.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = RCTLinking.xcodeproj; path = "../node_modules/react-native/Libraries/LinkingIOS/RCTLinking.xcodeproj"; sourceTree = "<group>"; };
 		0C11EC89AC556A01236D02F0 /* libPods-Genji.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Genji.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -825,6 +826,7 @@
 		13B07FAE1A68108700A75B9A /* Genji */ = {
 			isa = PBXGroup;
 			children = (
+				044C847621524ECC00116926 /* Genji.entitlements */,
 				04879F6B214CB47100C537AD /* GoogleService-Info.plist */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
@@ -1088,6 +1090,11 @@
 					13B07F861A680F5B00A75B9A = {
 						DevelopmentTeam = 7CRYNR44B3;
 						ProvisioningStyle = Manual;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 					2D02E47A1E0B4A5D006451C7 = {
 						CreatedOnToolsVersion = 8.2.1;
@@ -1896,6 +1903,7 @@
 			baseConfigurationReference = 28549D68E852198920A2450A /* Pods-Genji.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Genji/Genji.entitlements;
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
 				DEAD_CODE_STRIPPING = NO;
@@ -1937,6 +1945,7 @@
 			baseConfigurationReference = 8D629FA55F4746FDBDD0794E /* Pods-Genji.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Genji/Genji.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 3;
