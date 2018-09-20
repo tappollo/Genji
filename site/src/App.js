@@ -56,8 +56,8 @@ class App extends Component {
         <AnimationArea>
           <Image src={require("./phone.png")} />
           <Content>
-            <Title>Github</Title>
-            <Subtitle>Trending repo app</Subtitle>
+            <Title>Genji</Title>
+            <Subtitle>Github trending repo app</Subtitle>
             <AppStore />
           </Content>
         </AnimationArea>
