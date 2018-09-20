@@ -46,7 +46,7 @@ const AppStore = styled.img.attrs({
   src: require('./appstore.svg')
 })`
   margin-top: 10px;
-  margin-left: -17px;
+  margin-left: -70px;
 `;
 
 class App extends Component {
