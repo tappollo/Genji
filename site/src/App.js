@@ -31,14 +31,21 @@ const Content = styled.div`
 const Title = styled.span`
   display: flex;
   font-size: 20px;
-  color: gray;
+  color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
 const Subtitle = styled.span`
   margin-top: 2px;
   font-size: 17px;
-  color: lightgray;
+  color: #888888;
+  font-family: Arial, Helvetica, sans-serif;
+`;
+
+const Contact = styled.span`
+  margin-top: 10px;
+  font-size: 13px;
+  color: #DDDDDD;
   font-family: Arial, Helvetica, sans-serif;
 `;
 
@@ -46,7 +53,8 @@ const AppStore = styled.img.attrs({
   src: require('./appstore.svg')
 })`
   margin-top: 10px;
-  margin-left: -70px;
+  width: 120px;
+  height: 40px;
 `;
 
 class App extends Component {
@@ -59,6 +67,7 @@ class App extends Component {
             <Title>Genji</Title>
             <Subtitle>Github trending repo app</Subtitle>
             <AppStore />
+            <Contact>Contact: zhigang1992@gmail.com</Contact>
           </Content>
         </AnimationArea>
       </Container>
