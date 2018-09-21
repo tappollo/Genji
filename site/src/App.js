@@ -66,7 +66,9 @@ class App extends Component {
           <Content>
             <Title>Genji</Title>
             <Subtitle>Github trending repo app</Subtitle>
-            <AppStore />
+            <a href="https://itunes.apple.com/us/app/genji-trending-repos/id1436436317?ls=1&mt=8">
+              <AppStore />
+            </a>
             <Contact>Contact: zhigang1992@gmail.com</Contact>
           </Content>
         </AnimationArea>
