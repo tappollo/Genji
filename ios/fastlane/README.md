@@ -21,6 +21,11 @@ or alternatively using `brew cask install fastlane`
 fastlane ios release
 ```
 Description of what the lane does
+### ios bump
+```
+fastlane ios bump
+```
+
 
 ----
 

@@ -7,4 +7,7 @@ platform :ios do
       build_app(scheme: "Genji")
       upload_to_app_store
   end
+  lane :bump do
+      increment_version_number
+  end
 end
