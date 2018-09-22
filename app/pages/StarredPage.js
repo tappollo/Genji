@@ -184,7 +184,7 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
             }}
             fetchPolicy="cache-and-network"
           >
-            {({ loading, error, data, fetchMore }) => {
+            {({ loading, error, data, fetchMore, refetch }) => {
               if (loading && !Boolean(Object.keys(data)[0])) {
                 return <ActivityIndicator />;
               }
@@ -202,6 +202,8 @@ const StarredPage = ({ navigation, user, updateUser, updateStarred }) => (
               }
               return (
                 <FlatList
+                  refreshing={loading}
+                  onRefresh={refetch}
                   data={data.viewer.starredRepositories.edges}
                   ListHeaderComponent={() => (
                     <Header
