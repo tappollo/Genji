@@ -5,6 +5,9 @@ PODS:
   - BoringSSL/Implementation (10.0.6):
     - BoringSSL/Interface (= 10.0.6)
   - BoringSSL/Interface (10.0.6)
+  - Crashlytics (3.10.7):
+    - Fabric (~> 1.7.11)
+  - Fabric (1.7.11)
   - Firebase/Analytics (5.8.0):
     - Firebase/Core
   - Firebase/Auth (5.8.0):
@@ -170,6 +173,8 @@ PODS:
   - Protobuf (3.6.1)
 
 DEPENDENCIES:
+  - Crashlytics
+  - Fabric
   - Firebase/Analytics
   - Firebase/Auth
   - Firebase/Core
@@ -184,6 +189,8 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - BoringSSL
+    - Crashlytics
+    - Fabric
     - Firebase
     - FirebaseABTesting
     - FirebaseAnalytics
@@ -213,6 +220,8 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   BoringSSL: e10f92a27043805c01071fe815a5cd98ae8212e7
+  Crashlytics: ccaac42660eb9351b9960c0d66106b0bcf99f4fa
+  Fabric: f233c9492b3bbc1f04e3882986740f7988a58edb
   Firebase: 25812f43e7a53b11ae2f0a5f4c6d12faeb1f7cd7
   FirebaseABTesting: 1f50b8d50f5e3469eea54e7463a7b7fe221d1f5e
   FirebaseAnalytics: df15839e9c6ca6bd14d2e8ab6b0c672e6c49097e
@@ -240,6 +249,6 @@ SPEC CHECKSUMS:
   nanopb: 5601e6bca2dbf1ed831b519092ec110f66982ca3
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
-PODFILE CHECKSUM: 646791f3ed3711bd491fca969016d2c50f5c8228
+PODFILE CHECKSUM: 10a2b0320ba69fe44b1464ac754871d1e57f70e5
 
 COCOAPODS: 1.5.3

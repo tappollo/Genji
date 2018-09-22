@@ -105,7 +105,7 @@ const TopSpacer = styled.View`
 
 const TrendingList = ({ language = "", onSelect }) => (
   <Stateful state={{ language }}>
-    {({ state, setState, object }) => (
+    {({ state, setState, object, getState }) => (
       <Fragment>
         <OnMountAndUnMount>
           {async ({ mount }) => {
@@ -113,7 +113,7 @@ const TrendingList = ({ language = "", onSelect }) => (
               object.onDailyUpdate = ({ type, data }) => {
                 setState({
                   loading: type === "loading",
-                  daily: data
+                  daily: data || getState().daily
                 });
               };
               object.onWeeklyUpdate = ({ type, data }) => {
@@ -135,10 +135,21 @@ const TrendingList = ({ language = "", onSelect }) => (
             }
           }}
         </OnMountAndUnMount>
-        {state.loading ? (
+        {(state.loading && !state.refreshing) ? (
           <Loading />
         ) : (
           <List
+            refreshing={Boolean(state.refreshing)}
+            onRefresh={async () => {
+              try {
+                setState({refreshing: true});
+                await loadTrending({ timeSpan: "daily", language, force: true });
+              } finally {
+                setState({refreshing: false});
+                await loadTrending({ timeSpan: "weekly", language, force: true });
+                await loadTrending({ timeSpan: "monthly", language, force: true });
+              }
+            }}
             initialNumToRender={6}
             ListHeaderComponent={language && TopSpacer}
             sections={sectionsFrom(state)}

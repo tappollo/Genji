@@ -33,11 +33,12 @@ const fetchingInProgress = {};
 
 export const loadTrending = async ({
   timeSpan = "daily",
-  language = ""
+  language = "",
+  force = false,
 } = {}) => {
   const key = `${timeSpan}_${language}`;
   const cached = await getOnDiskVersion(key);
-  if (cached && dayjs(cached.timestamp).isAfter(dayjs().subtract(1, "day"))) {
+  if (!force && cached && dayjs(cached.timestamp).isAfter(dayjs().subtract(1, "day"))) {
     trendingEvent.emit(key, {
       type: "cached",
       data: cached.data
