@@ -1,6 +1,10 @@
 import {Linking} from 'react-native';
 import SafariView from 'react-native-safari-view';
 
+// Please don't abuse this
+// Kept it here for convenience
+// You can get it from the ipa file anyway
+// So plz, pretty please
 const clientID = 'daa3ed310bf7c0d7ba1e';
 const clientSecret = '606be629beec5490d03d466bf1008555c97f3d96';
 
